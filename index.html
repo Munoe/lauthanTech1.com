@@ -4,1922 +4,1422 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Solatech Computers Pvt Ltd | Technology, Printing & Branding</title>
+<title>Solatech Computers Pvt Ltd | IT, Printing & Branding Solutions</title>
 
-<meta name="description" content="Solatech Computers Private Limited - Computer sales, repairs, networking, CCTV, printing, DTF branding and large format printing in Mutare, Zimbabwe.">
+<meta name="description"
+content="Solatech Computers Pvt Ltd - Computer sales, repairs, networking, CCTV, printing, graphic design, branding and large format printing in Mutare, Zimbabwe.">
 
-<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="icon" type="image/png" href="images/logo.png">
 
-<!-- =========================================================
-     GOOGLE FONTS
-========================================================= -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- =========================================================
-     BOOTSTRAP
-========================================================= -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- =========================================================
-     BOOTSTRAP ICONS
-========================================================= -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
 /* =========================================================
-   ROOT COLORS
-========================================================= */
+   SOLATECH COMPUTERS
+   BukPod-inspired modern print/technology website
+   ========================================================= */
 
-:root {
-    --orange: #ff5b22;
-    --orange-dark: #e74612;
-    --orange-light: #fff0e9;
+:root{
+    --green:#0b5d45;
+    --green-dark:#063c2e;
+    --green-light:#e9f7f1;
 
-    --black: #101010;
-    --dark: #151515;
-    --dark-2: #1c1c1c;
+    --blue:#0866b3;
+    --blue-dark:#064b82;
+    --blue-light:#eaf5ff;
 
-    --cream: #f5f3ef;
-    --light: #faf9f7;
+    --white:#ffffff;
+    --black:#111827;
+    --gray:#667085;
+    --light:#f5f8f7;
+    --border:#e5e7eb;
 
-    --white: #ffffff;
+    --yellow:#f4c542;
 
-    --gray: #737373;
-    --gray-light: #dedbd6;
+    --radius:18px;
+    --shadow:0 15px 45px rgba(0,0,0,.08);
+}
 
-    --border: #e5e2dd;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:var(--black);
+    background:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    background:var(--green-light);
+    color:var(--green);
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.section-title{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(35px,5vw,58px);
+    line-height:1.08;
+    font-weight:800;
+    margin:18px 0;
+}
+
+.section-title span{
+    color:var(--green);
+}
+
+.section-description{
+    color:var(--gray);
+    max-width:650px;
+    font-size:17px;
+    line-height:1.8;
 }
 
 
 /* =========================================================
-   GLOBAL
-========================================================= */
+   TOP BAR
+   ========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.topbar{
+    background:var(--green-dark);
+    color:#fff;
+    font-size:13px;
+    padding:9px 0;
 }
 
-html {
-    scroll-behavior: smooth;
+.topbar-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
-body {
-    font-family: "DM Sans", sans-serif;
-    color: var(--black);
-    background: var(--white);
-    overflow-x: hidden;
+.topbar-left,
+.topbar-right{
+    display:flex;
+    gap:20px;
+    align-items:center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 700;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    max-width: 1240px;
-}
-
-.text-orange {
-    color: var(--orange);
+.topbar i{
+    margin-right:5px;
 }
 
 
 /* =========================================================
-   PRELOADER
-========================================================= */
+   NAVIGATION
+   ========================================================= */
 
-#preloader {
-    position: fixed;
-    inset: 0;
-    background: var(--black);
-    z-index: 999999;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: opacity .6s ease;
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,0,0,.06);
 }
 
-.loader-box {
-    text-align: center;
-    color: white;
+.navbar{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.loader-logo {
-    width: 100px;
-    max-height: 80px;
-    object-fit: contain;
-    margin-bottom: 25px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:"Manrope",sans-serif;
+    font-weight:800;
+    font-size:22px;
+    color:var(--green-dark);
 }
 
-.loader {
-    width: 50px;
-    height: 50px;
-
-    border: 4px solid rgba(255,255,255,.15);
-    border-top-color: var(--orange);
-
-    border-radius: 50%;
-
-    animation: spin 1s linear infinite;
-
-    margin: auto;
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
 }
 
-@keyframes spin {
-
-    to {
-        transform: rotate(360deg);
-    }
-
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-
-/* =========================================================
-   NAVBAR
-========================================================= */
-
-.navbar {
-    background: rgba(15,15,15,.97);
-    padding: 18px 0;
-
-    transition: all .35s ease;
-
-    z-index: 9999;
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
-.navbar.scrolled {
-    padding: 10px 0;
-    box-shadow: 0 5px 30px rgba(0,0,0,.25);
+.nav-links a:hover{
+    color:var(--green);
 }
 
-.logo {
-    width: auto;
-    height: 55px;
-    object-fit: contain;
+.nav-btn{
+    background:var(--green);
+    color:#fff !important;
+    padding:14px 22px;
+    border-radius:50px;
 }
 
-.brand-name {
-    color: white;
-    font-family: "Space Grotesk";
-    font-size: 21px;
-    font-weight: 700;
-    letter-spacing: -.5px;
-}
-
-.brand-name span {
-    color: var(--orange);
-}
-
-.navbar-nav {
-    gap: 5px;
-}
-
-.nav-link {
-    color: #fff !important;
-    font-weight: 500;
-    padding: 11px 14px !important;
-    transition: .3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--orange) !important;
-}
-
-.nav-cta {
-    background: var(--orange);
-    color: white !important;
-    border-radius: 3px;
-    padding: 12px 20px !important;
-    margin-left: 10px;
-}
-
-.nav-cta:hover {
-    background: white;
-    color: var(--black) !important;
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:25px;
 }
 
 
 /* =========================================================
    HERO
-========================================================= */
+   ========================================================= */
 
-.hero {
-    min-height: 100vh;
-
+.hero{
+    min-height:calc(100vh - 120px);
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.94) 0%,
-            rgba(0,0,0,.80) 42%,
-            rgba(0,0,0,.38) 100%
-        ),
-        url("images/hero/hero-printing.jpg")
-        center center / cover no-repeat;
+        linear-gradient(100deg,
+        rgba(3,44,34,.94),
+        rgba(4,74,65,.76),
+        rgba(4,91,145,.58)),
+        url("images/hero-printing.jpg") center/cover;
 
-    color: white;
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-    overflow: hidden;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
 }
 
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 600px;
-    height: 600px;
-
-    border: 1px solid rgba(255,91,34,.25);
-
-    border-radius: 50%;
-
-    right: -260px;
-    bottom: -260px;
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+    right:-150px;
+    top:-150px;
+    animation:rotate 18s linear infinite;
 }
 
-.hero::after {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    border: 1px solid rgba(255,255,255,.12);
-
-    border-radius: 50%;
-
-    right: -100px;
-    bottom: -100px;
+.hero::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+    left:-100px;
+    bottom:-100px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 3;
-
-    max-width: 850px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    min-height:calc(100vh - 120px);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
 }
 
-.hero-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    color: #ff9c78;
-
-    border: 1px solid rgba(255,91,34,.45);
-
-    background: rgba(255,91,34,.10);
-
-    padding: 9px 17px;
-
-    border-radius: 50px;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 25px;
+.hero-text{
+    animation:fadeUp .9s ease;
 }
 
-.hero-label i {
-    color: var(--orange);
+.hero-badge{
+    display:inline-flex;
+    padding:8px 16px;
+    border-radius:50px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.2);
+    font-size:13px;
+    margin-bottom:25px;
 }
 
-.hero h1 {
-    font-size: clamp(48px, 7vw, 92px);
-
-    line-height: .96;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 30px;
+.hero h1{
+    font-family:"Manrope",sans-serif;
+    font-size:clamp(45px,6vw,76px);
+    line-height:1.03;
+    font-weight:800;
 }
 
-.hero h1 span {
-    color: var(--orange);
+.hero h1 span{
+    color:#7de4be;
 }
 
-.hero p {
-    color: #ddd;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    max-width: 720px;
+.hero p{
+    margin:25px 0 32px;
+    font-size:18px;
+    line-height:1.8;
+    color:rgba(255,255,255,.85);
+    max-width:650px;
 }
 
-.hero-buttons {
-    margin-top: 35px;
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.btn-main {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    padding: 16px 28px;
-
-    background: var(--orange);
-
-    color: white;
-
-    font-weight: 700;
-
-    border-radius: 3px;
-
-    transition: .35s ease;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 25px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+    border:2px solid transparent;
 }
 
-.btn-main:hover {
-    background: white;
-    color: var(--black);
-
-    transform: translateY(-4px);
+.btn-primary{
+    background:#fff;
+    color:var(--green-dark);
 }
 
-.btn-outline {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    padding: 15px 27px;
-
-    border: 1px solid rgba(255,255,255,.5);
-
-    color: white;
-
-    font-weight: 600;
-
-    border-radius: 3px;
-
-    margin-left: 10px;
-
-    transition: .35s ease;
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
 }
 
-.btn-outline:hover {
-    background: white;
-    color: var(--black);
+.btn-outline{
+    border-color:rgba(255,255,255,.6);
+    color:#fff;
 }
 
-.hero-scroll {
-    position: absolute;
-
-    bottom: 30px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    color: white;
-
-    font-size: 12px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    opacity: .7;
-
-    z-index: 5;
+.btn-outline:hover{
+    background:#fff;
+    color:var(--green-dark);
 }
 
-.hero-scroll i {
-    margin-left: 8px;
+.hero-visual{
+    position:relative;
+    animation:float 5s ease-in-out infinite;
+}
+
+.hero-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    padding:20px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:28px;
+    box-shadow:0 30px 70px rgba(0,0,0,.25);
+}
+
+.hero-card img{
+    width:100%;
+    height:480px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.floating-card{
+    position:absolute;
+    bottom:-30px;
+    left:-35px;
+    background:#fff;
+    color:var(--black);
+    padding:18px 22px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.floating-card strong{
+    display:block;
+    font-size:25px;
+    color:var(--green);
 }
 
 
 /* =========================================================
-   MOVING STRIP
-========================================================= */
+   TRUST STRIP
+   ========================================================= */
 
-.marquee {
-    overflow: hidden;
-
-    background: var(--orange);
-
-    color: white;
-
-    white-space: nowrap;
-
-    padding: 17px 0;
+.trust-strip{
+    background:#fff;
+    margin-top:-45px;
+    position:relative;
+    z-index:5;
 }
 
-.marquee-track {
-    display: inline-flex;
-
-    animation: marquee 35s linear infinite;
-
-    font-family: "Space Grotesk";
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#fff;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
 }
 
-.marquee-track span {
-    margin: 0 32px;
+.trust-item{
+    padding:28px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    border-right:1px solid var(--border);
 }
 
-.marquee-track i {
-    font-size: 9px;
+.trust-item:last-child{
+    border:0;
 }
 
-@keyframes marquee {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-
-}
-
-
-/* =========================================================
-   GENERAL SECTIONS
-========================================================= */
-
-.section {
-    padding: 110px 0;
-}
-
-.section-light {
-    background: var(--cream);
-}
-
-.section-dark {
-    background: var(--black);
-    color: white;
-}
-
-.section-label {
-    color: var(--orange);
-
-    font-size: 13px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-weight: 700;
-
-    margin-bottom: 16px;
-}
-
-.section-title {
-    font-size: clamp(40px, 5vw, 68px);
-
-    line-height: 1.02;
-
-    letter-spacing: -3px;
-}
-
-.section-description {
-    color: var(--gray);
-
-    font-size: 17px;
-
-    line-height: 1.85;
+.trust-icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--green-light);
+    color:var(--green);
+    display:grid;
+    place-items:center;
+    font-size:20px;
 }
 
 
 /* =========================================================
    ABOUT
-========================================================= */
+   ========================================================= */
 
-.about-photo {
-    height: 580px;
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+}
 
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+    height:560px;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.about-badge{
+    position:absolute;
+    right:-25px;
+    bottom:30px;
+    background:var(--green);
+    color:#fff;
+    padding:25px;
+    border-radius:18px;
+    width:190px;
+    box-shadow:var(--shadow);
+}
+
+.about-badge strong{
+    display:block;
+    font-size:35px;
+}
+
+.about-list{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.about-list div{
+    padding:16px;
+    background:var(--light);
+    border-radius:12px;
+    font-weight:600;
+}
+
+.about-list i{
+    color:var(--green);
+    margin-right:8px;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services{
+    background:var(--light);
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-heading .section-description{
+    margin:auto;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    transition:.4s;
+    border:1px solid var(--border);
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:var(--green-light);
+    border-radius:50%;
+    right:-40px;
+    top:-40px;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow);
+}
+
+.service-card:hover::after{
+    transform:scale(3);
+}
+
+.service-icon{
+    width:65px;
+    height:65px;
+    background:var(--green-light);
+    color:var(--green);
+    display:grid;
+    place-items:center;
+    border-radius:16px;
+    font-size:25px;
+    margin-bottom:25px;
+    position:relative;
+    z-index:2;
+}
+
+.service-card h3{
+    font-size:21px;
+    margin-bottom:12px;
+    position:relative;
+    z-index:2;
+}
+
+.service-card p{
+    color:var(--gray);
+    line-height:1.7;
+    position:relative;
+    z-index:2;
+}
+
+.service-link{
+    display:inline-flex;
+    margin-top:20px;
+    color:var(--green);
+    font-weight:700;
+    position:relative;
+    z-index:2;
+}
+
+
+/* =========================================================
+   BRANDING SHOWCASE
+   ========================================================= */
+
+.branding{
+    background:#fff;
+}
+
+.branding-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.branding-gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.branding-gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.4s;
+}
+
+.branding-gallery img:hover{
+    transform:scale(1.03);
+}
+
+.branding-content ul{
+    list-style:none;
+    margin-top:30px;
+}
+
+.branding-content li{
+    padding:12px 0;
+    display:flex;
+    gap:12px;
+    color:var(--gray);
+}
+
+.branding-content li i{
+    color:var(--green);
+    margin-top:5px;
+}
+
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+
+.products{
+    background:var(--green-dark);
+    color:#fff;
+}
+
+.products .section-description{
+    color:rgba(255,255,255,.7);
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product-card{
+    background:#fff;
+    color:var(--black);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    height:230px;
+    width:100%;
+    object-fit:cover;
+}
+
+.product-card-body{
+    padding:20px;
+}
+
+.product-card-body h3{
+    margin-bottom:8px;
+}
+
+.product-card-body p{
+    color:var(--gray);
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   LARGE FORMAT
+   ========================================================= */
+
+.large-format{
     background:
-        linear-gradient(
-            rgba(0,0,0,.12),
-            rgba(0,0,0,.12)
-        ),
-        url("images/about/shop.jpg")
-        center / cover no-repeat;
-
-    position: relative;
-
-    overflow: hidden;
+        linear-gradient(100deg,rgba(3,62,47,.95),rgba(3,86,140,.88)),
+        url("images/large-format.jpg") center/cover;
+    color:#fff;
 }
 
-.about-badge {
-    position: absolute;
-
-    right: 25px;
-    bottom: 25px;
-
-    width: 190px;
-
-    padding: 25px;
-
-    background: var(--orange);
-
-    color: white;
-
-    text-align: center;
+.large-format-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:60px;
 }
 
-.about-badge strong {
-    display: block;
-
-    font-family: "Space Grotesk";
-
-    font-size: 55px;
-
-    line-height: 1;
+.large-format .section-description{
+    color:rgba(255,255,255,.78);
 }
 
-
-/* =========================================================
-   SERVICE CARDS
-========================================================= */
-
-.service-card {
-    background: white;
-
-    border: 1px solid var(--border);
-
-    padding: 38px 30px;
-
-    height: 100%;
-
-    position: relative;
-
-    overflow: hidden;
-
-    transition: .45s ease;
+.format-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:30px;
 }
 
-.service-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    height: 4px;
-
-    width: 0;
-
-    background: var(--orange);
-
-    transition: .4s ease;
+.format-list div{
+    padding:16px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:12px;
 }
 
-.service-card:hover::before {
-    width: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-
-    box-shadow: 0 25px 60px rgba(0,0,0,.10);
-}
-
-.service-icon {
-    width: 65px;
-    height: 65px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--orange-light);
-
-    color: var(--orange);
-
-    font-size: 28px;
-
-    margin-bottom: 25px;
-}
-
-.service-number {
-    position: absolute;
-
-    top: 15px;
-    right: 18px;
-
-    font-family: "Space Grotesk";
-
-    font-size: 55px;
-
-    color: #eeeeee;
-
-    font-weight: 700;
-}
-
-.service-card h3 {
-    font-size: 23px;
-
-    margin-bottom: 14px;
-}
-
-.service-card p {
-    color: var(--gray);
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   LARGE IMAGE BANNER
-========================================================= */
-
-.image-banner {
-    min-height: 570px;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.68)
-        ),
-        url("images/hero/hero-branding.jpg")
-        center / cover no-repeat;
-
-    display: flex;
-
-    align-items: center;
-
-    color: white;
-}
-
-.image-banner-content {
-    max-width: 850px;
-}
-
-.image-banner h2 {
-    font-size: clamp(45px, 6vw, 80px);
-
-    line-height: .98;
-
-    letter-spacing: -3px;
-}
-
-
-/* =========================================================
-   BRANDING PRODUCT CARDS
-========================================================= */
-
-.product-card {
-    background: white;
-
-    border: 1px solid var(--border);
-
-    height: 100%;
-
-    overflow: hidden;
-
-    transition: .45s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-
-    box-shadow: 0 25px 60px rgba(0,0,0,.12);
-}
-
-.product-image {
-    height: 310px;
-
-    background: #eee;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: .7s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.08);
-}
-
-.product-number {
-    position: absolute;
-
-    left: 15px;
-    top: 15px;
-
-    padding: 7px 12px;
-
-    background: var(--orange);
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-.product-content {
-    padding: 25px;
-}
-
-.product-content h3 {
-    font-size: 22px;
-
-    margin-bottom: 10px;
-}
-
-.product-content p {
-    color: var(--gray);
-
-    line-height: 1.7;
-
-    min-height: 80px;
-}
-
-.product-content a {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color: var(--black);
-
-    font-weight: 700;
-
-    transition: .3s;
-}
-
-.product-content a:hover {
-    color: var(--orange);
-}
-
-.product-content a i {
-    transition: .3s;
-}
-
-.product-content a:hover i {
-    transform: translate(4px,-4px);
-}
-
-
-/* =========================================================
-   CATEGORY FEATURE
-========================================================= */
-
-.category-feature {
-    background: var(--black);
-
-    color: white;
-
-    padding: 50px;
-
-    height: 100%;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.category-feature::after {
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-    height: 220px;
-
-    border: 1px solid rgba(255,91,34,.25);
-
-    border-radius: 50%;
-
-    right: -80px;
-    bottom: -80px;
-}
-
-.category-feature i {
-    color: var(--orange);
-
-    font-size: 45px;
-
-    margin-bottom: 25px;
-}
-
-.category-feature h3 {
-    font-size: 30px;
-}
-
-.category-feature p {
-    color: #aaa;
-
-    line-height: 1.8;
+.format-image img{
+    border-radius:25px;
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
 
 
 /* =========================================================
    COUNTERS
-========================================================= */
+   ========================================================= */
 
-.counter-section {
-    background: var(--orange);
-
-    color: white;
-
-    padding: 75px 0;
+.stats{
+    padding:70px 0;
+    background:var(--light);
 }
 
-.counter-box {
-    text-align: center;
-
-    border-right: 1px solid rgba(255,255,255,.3);
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
 }
 
-.counter-box:last-child {
-    border-right: none;
+.stat{
+    padding:20px;
+    border-right:1px solid var(--border);
 }
 
-.counter {
-    font-family: "Space Grotesk";
-
-    font-size: 62px;
-
-    line-height: 1;
-
-    font-weight: 700;
+.stat:last-child{
+    border:0;
 }
 
-.counter-box p {
-    margin-top: 12px;
+.stat strong{
+    display:block;
+    font-size:45px;
+    color:var(--green);
+    font-family:"Manrope",sans-serif;
+}
 
-    margin-bottom: 0;
-
-    font-weight: 600;
+.stat span{
+    color:var(--gray);
 }
 
 
 /* =========================================================
    PROCESS
-========================================================= */
+   ========================================================= */
 
-.process-card {
-    background: var(--dark-2);
-
-    padding: 32px;
-
-    height: 100%;
-
-    border-left: 3px solid var(--orange);
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.process-number {
-    color: var(--orange);
-
-    font-family: "Space Grotesk";
-
-    font-size: 48px;
-
-    margin-bottom: 20px;
+.process-card{
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    position:relative;
 }
 
-.process-card h3 {
-    font-size: 23px;
+.process-number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--green);
+    color:#fff;
+    font-weight:800;
+    margin-bottom:25px;
 }
 
-.process-card p {
-    color: #999;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   BRANCHES
-========================================================= */
-
-.branch-card {
-    background: white;
-
-    border: 1px solid var(--border);
-
-    padding: 38px;
-
-    height: 100%;
-
-    transition: .4s ease;
-}
-
-.branch-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.09);
-}
-
-.branch-card .branch-icon {
-    width: 70px;
-    height: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--orange-light);
-
-    color: var(--orange);
-
-    font-size: 32px;
-
-    margin-bottom: 25px;
-}
-
-.branch-card h3 {
-    font-size: 25px;
-}
-
-.branch-card p {
-    color: var(--gray);
-
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.gallery-item {
-    position: relative;
-
-    height: 400px;
-
-    overflow: hidden;
-
-    background: #ddd;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: .7s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            transparent 35%,
-            rgba(0,0,0,.9)
-        );
-
-    display: flex;
-
-    align-items: flex-end;
-
-    padding: 30px;
-
-    color: white;
-}
-
-.gallery-overlay h3 {
-    font-size: 27px;
-}
-
-.gallery-overlay p {
-    color: #ddd;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta-section {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,91,34,.96),
-            rgba(230,70,18,.96)
-        );
-
-    color: white;
-
-    padding: 90px 0;
-}
-
-.cta-section h2 {
-    font-size: clamp(40px,5vw,65px);
-
-    line-height: 1;
-}
-
-.btn-white {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    background: white;
-
-    color: var(--black);
-
-    padding: 16px 28px;
-
-    font-weight: 700;
-
-    transition: .3s;
-}
-
-.btn-white:hover {
-    background: var(--black);
-
-    color: white;
-
-    transform: translateY(-3px);
+.process-card p{
+    color:var(--gray);
+    line-height:1.7;
+    margin-top:10px;
 }
 
 
 /* =========================================================
    CONTACT
-========================================================= */
+   ========================================================= */
 
-.contact-section {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.94),
-            rgba(0,0,0,.76)
-        ),
-        url("images/about/team.jpg")
-        center / cover no-repeat;
-
-    color: white;
+.contact{
+    background:var(--light);
 }
 
-.contact-box {
-    background: white;
-
-    color: var(--black);
-
-    padding: 45px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
 }
 
-.contact-info {
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
-    margin-bottom: 20px;
+.contact-info{
+    background:var(--green-dark);
+    color:#fff;
+    padding:45px;
+    border-radius:25px;
 }
 
-.contact-info i {
-    width: 45px;
-    height: 45px;
+.contact-info h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
 
-    display: flex;
+.contact-info > p{
+    color:rgba(255,255,255,.7);
+    line-height:1.7;
+    margin-bottom:30px;
+}
 
-    align-items: center;
-    justify-content: center;
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin:22px 0;
+}
 
-    background: var(--orange-light);
+.contact-item i{
+    color:#72ddb5;
+    font-size:20px;
+    width:25px;
+}
 
-    color: var(--orange);
+.contact-item span{
+    color:rgba(255,255,255,.8);
+}
 
-    flex-shrink: 0;
+.contact-form{
+    background:#fff;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:15px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    outline:none;
+    font-family:inherit;
+}
+
+.form-group textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:var(--green);
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.map-section{
+    padding:0;
+}
+
+.map{
+    width:100%;
+    height:430px;
+    border:0;
+    display:block;
 }
 
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
-footer {
-    background: #0b0b0b;
-
-    color: #999;
-
-    padding: 75px 0 25px;
+footer{
+    background:#041f19;
+    color:#fff;
+    padding:70px 0 25px;
 }
 
-footer h4 {
-    color: white;
-
-    margin-bottom: 22px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+    gap:40px;
 }
 
-.footer-logo {
-    height: 55px;
-
-    width: auto;
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:800;
 }
 
-footer a {
-    display: block;
-
-    color: #999;
-
-    margin-bottom: 10px;
-
-    transition: .3s;
+.footer-logo img{
+    width:50px;
 }
 
-footer a:hover {
-    color: var(--orange);
+.footer-col p{
+    color:rgba(255,255,255,.6);
+    line-height:1.8;
+    margin-top:20px;
 }
 
-.footer-description {
-    line-height: 1.8;
+.footer-col h4{
+    margin-bottom:20px;
 }
 
-.footer-bottom {
-    border-top: 1px solid #292929;
-
-    margin-top: 45px;
-
-    padding-top: 25px;
-
-    text-align: center;
+.footer-col a{
+    display:block;
+    color:rgba(255,255,255,.65);
+    margin:12px 0;
+    transition:.3s;
 }
 
-.developer {
-    color: var(--orange);
-
-    font-weight: 700;
+.footer-col a:hover{
+    color:#72ddb5;
 }
 
-
-/* =========================================================
-   FLOATING WHATSAPP
-========================================================= */
-
-.whatsapp-button {
-    position: fixed;
-
-    left: 22px;
-    bottom: 22px;
-
-    width: 58px;
-    height: 58px;
-
-    background: #25D366;
-
-    color: white;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 28px;
-
-    z-index: 9990;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,.25);
-
-    transition: .3s;
+.socials{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
 }
 
-.whatsapp-button:hover {
-    color: white;
+.socials a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    display:grid;
+    place-items:center;
+}
 
-    transform: scale(1.1);
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:50px;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:rgba(255,255,255,.5);
+    font-size:13px;
 }
 
 
 /* =========================================================
-   CHAT BUTTON
-========================================================= */
+   CHATBOT
+   ========================================================= */
 
-.chat-button {
-    position: fixed;
-
-    right: 22px;
-    bottom: 22px;
-
-    width: 62px;
-    height: 62px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: var(--orange);
-
-    color: white;
-
-    font-size: 25px;
-
-    z-index: 9991;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,.3);
-
-    cursor: pointer;
-
-    animation: chatPulse 2s infinite;
+.chat-button{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:62px;
+    height:62px;
+    border:0;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+    z-index:2000;
 }
 
-@keyframes chatPulse {
+.chat-box{
+    position:fixed;
+    right:25px;
+    bottom:100px;
+    width:350px;
+    max-width:calc(100vw - 40px);
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 25px 70px rgba(0,0,0,.2);
+    overflow:hidden;
+    display:none;
+    z-index:2000;
+}
 
-    0% {
-        box-shadow: 0 0 0 0 rgba(255,91,34,.55);
+.chat-box.active{
+    display:block;
+    animation:chatIn .3s ease;
+}
+
+.chat-header{
+    background:var(--green-dark);
+    color:#fff;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.chat-header strong{
+    display:block;
+}
+
+.chat-header small{
+    opacity:.7;
+}
+
+.chat-close{
+    background:none;
+    border:0;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.chat-messages{
+    height:280px;
+    padding:18px;
+    overflow-y:auto;
+    background:#f7faf9;
+}
+
+.message{
+    max-width:85%;
+    padding:11px 14px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.bot{
+    background:#fff;
+    border:1px solid var(--border);
+}
+
+.user{
+    background:var(--green);
+    color:#fff;
+    margin-left:auto;
+}
+
+.chat-input{
+    display:flex;
+    border-top:1px solid var(--border);
+}
+
+.chat-input input{
+    flex:1;
+    border:0;
+    padding:15px;
+    outline:none;
+}
+
+.chat-input button{
+    width:55px;
+    border:0;
+    background:var(--green);
+    color:#fff;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp{
+    position:fixed;
+    left:25px;
+    bottom:25px;
+    width:58px;
+    height:58px;
+    background:#25d366;
+    color:#fff;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+    z-index:1500;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
     }
-
-    70% {
-        box-shadow: 0 0 0 18px rgba(255,91,34,0);
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
+}
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(255,91,34,0);
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
     }
-
+    50%{
+        transform:translateY(-15px);
+    }
 }
 
-
-/* =========================================================
-   CHAT WINDOW
-========================================================= */
-
-.chat-window {
-    position: fixed;
-
-    right: 22px;
-    bottom: 100px;
-
-    width: 370px;
-
-    background: white;
-
-    box-shadow: 0 20px 70px rgba(0,0,0,.25);
-
-    z-index: 9992;
-
-    display: none;
-
-    overflow: hidden;
-
-    border-radius: 5px;
+@keyframes rotate{
+    from{
+        transform:rotate(0);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
 
-.chat-header {
-    background: var(--black);
-
-    color: white;
-
-    padding: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-.chat-close {
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 20px;
-
-    cursor: pointer;
-}
-
-.chat-body {
-    height: 310px;
-
-    padding: 20px;
-
-    overflow-y: auto;
-
-    background: #fafafa;
-}
-
-.bot-message,
-.user-message {
-    max-width: 85%;
-
-    padding: 12px 14px;
-
-    margin-bottom: 12px;
-
-    border-radius: 10px;
-
-    line-height: 1.5;
-
-    font-size: 14px;
-}
-
-.bot-message {
-    background: #e9e9e9;
-
-    color: #222;
-}
-
-.user-message {
-    background: var(--orange);
-
-    color: white;
-
-    margin-left: auto;
-}
-
-.chat-input {
-    display: flex;
-
-    border-top: 1px solid #ddd;
-}
-
-.chat-input input {
-    flex: 1;
-
-    border: none;
-
-    outline: none;
-
-    padding: 15px;
-}
-
-.chat-input button {
-    width: 55px;
-
-    border: none;
-
-    background: var(--orange);
-
-    color: white;
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-.back-top {
-    position: fixed;
-
-    right: 22px;
-    bottom: 95px;
-
-    width: 42px;
-    height: 42px;
-
-    border: none;
-
-    background: var(--black);
-
-    color: white;
-
-    display: none;
-
-    align-items: center;
-    justify-content: center;
-
-    z-index: 9900;
-
-    cursor: pointer;
-}
-
-.back-top.show {
-    display: flex;
-}
-
-
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(45px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* =========================================================
-   STAGGER ANIMATION
-========================================================= */
-
-.delay-1 {
-    transition-delay: .1s;
-}
-
-.delay-2 {
-    transition-delay: .2s;
-}
-
-.delay-3 {
-    transition-delay: .3s;
-}
-
-.delay-4 {
-    transition-delay: .4s;
+@keyframes chatIn{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
 }
 
 
 /* =========================================================
    RESPONSIVE
-========================================================= */
+   ========================================================= */
 
-@media(max-width: 991px) {
+@media(max-width:1000px){
 
-    .navbar-nav {
-        background: var(--black);
-
-        padding: 20px;
-
-        margin-top: 15px;
+    .hero-content{
+        grid-template-columns:1fr;
+        padding:90px 0;
     }
 
-    .nav-cta {
-        display: inline-block;
-
-        margin-left: 0;
-
-        margin-top: 8px;
+    .hero{
+        min-height:auto;
     }
 
-    .hero {
-        min-height: 850px;
+    .hero-content{
+        min-height:auto;
     }
 
-    .hero h1 {
-        font-size: 57px;
+    .hero-visual{
+        max-width:600px;
     }
 
-    .about-photo {
-        height: 450px;
-
-        margin-bottom: 20px;
+    .service-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .counter-box {
-        border-right: none;
-
-        border-bottom: 1px solid rgba(255,255,255,.3);
-
-        padding: 25px;
+    .product-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .counter-box:last-child {
-        border-bottom: none;
+    .about-grid,
+    .branding-grid,
+    .large-format-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
-@media(max-width: 576px) {
+@media(max-width:750px){
 
-    .logo {
-        height: 45px;
+    .topbar{
+        display:none;
     }
 
-    .brand-name {
-        font-size: 16px;
+    .navbar{
+        height:72px;
     }
 
-    .hero {
-        min-height: 780px;
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#fff;
+        padding:20px;
+        flex-direction:column;
+        align-items:flex-start;
+        box-shadow:0 15px 30px rgba(0,0,0,.1);
     }
 
-    .hero h1 {
-        font-size: 43px;
-
-        letter-spacing: -2px;
+    .nav-links.active{
+        display:flex;
     }
 
-    .hero p {
-        font-size: 16px;
+    .menu-btn{
+        display:block;
     }
 
-    .btn-outline {
-        margin-left: 0;
-
-        margin-top: 12px;
+    section{
+        padding:75px 0;
     }
 
-    .section {
-        padding: 75px 0;
+    .hero h1{
+        font-size:44px;
     }
 
-    .section-title {
-        letter-spacing: -2px;
+    .hero-card img{
+        height:330px;
     }
 
-    .product-image {
-        height: 270px;
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .gallery-item {
-        height: 300px;
+    .trust-item{
+        border-bottom:1px solid var(--border);
     }
 
-    .chat-window {
-        right: 10px;
-
-        width: calc(100% - 20px);
+    .service-grid,
+    .product-grid,
+    .process-grid{
+        grid-template-columns:1fr;
     }
 
-    .whatsapp-button {
-        left: 15px;
-
-        bottom: 15px;
+    .about-list,
+    .format-list,
+    .form-grid{
+        grid-template-columns:1fr;
     }
 
-    .chat-button {
-        right: 15px;
-
-        bottom: 15px;
+    .footer-grid{
+        grid-template-columns:1fr;
     }
 
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .chat-box{
+        right:15px;
+        bottom:90px;
+    }
+
+    .chat-button{
+        right:15px;
+        bottom:15px;
+    }
+
+    .whatsapp{
+        left:15px;
+        bottom:15px;
+    }
 }
 
 </style>
-
 </head>
-
 
 <body>
 
 
-<!-- =========================================================
-     PRELOADER
-========================================================= -->
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
 
-<div id="preloader">
+<div class="topbar">
+<div class="container topbar-content">
 
-    <div class="loader-box">
+<div class="topbar-left">
+<span><i class="fa-solid fa-phone"></i> 0775 799 634</span>
+<span><i class="fa-solid fa-envelope"></i> info@solatech.co.zw</span>
+</div>
 
-        <img
-            src="images/logo.png"
-            class="loader-logo"
-            alt="Solatech Computers">
+<div class="topbar-right">
+<span>Mutare, Zimbabwe</span>
+<span>Mon - Sat: 8:00 - 17:00</span>
+</div>
 
-        <div class="loader"></div>
-
-    </div>
-
+</div>
 </div>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<header>
 
-<div class="container">
+<div class="container navbar">
 
-<a
-    class="navbar-brand d-flex align-items-center"
-    href="#home"
->
+<a href="#home" class="logo">
 
-<img
-    src="images/logo.png"
-    class="logo"
-    alt="Solatech Computers Logo"
->
+<img src="images/logo.png" alt="Solatech Computers Logo">
 
-<span class="brand-name ms-3">
-SOLATECH <span>COMPUTERS</span>
-</span>
+<span>Solatech<br><small>Computers</small></span>
 
 </a>
 
 
-<button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#mainNav"
->
-
-<span class="navbar-toggler-icon"></span>
-
+<button class="menu-btn" id="menuBtn">
+<i class="fa-solid fa-bars"></i>
 </button>
 
 
-<div
-    class="collapse navbar-collapse"
-    id="mainNav"
->
+<nav class="nav-links" id="navLinks">
 
-<ul class="navbar-nav ms-auto align-items-lg-center">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#branding">Branding</a>
+<a href="#products">Products</a>
+<a href="#process">Our Process</a>
+<a href="#contact">Contact</a>
 
-<li class="nav-item">
-<a class="nav-link active" href="#home">
-Home
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#about">
-About
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#services">
-Services
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#branding">
-Branding
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#printing">
-Printing
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#branches">
-Branches
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">
-Contact
-</a>
-</li>
-
-<li class="nav-item">
-
-<a
-    class="nav-link nav-cta"
-    href="#contact"
->
+<a href="#contact" class="nav-btn">
 Get A Quote
 </a>
 
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
 </nav>
 
+</div>
+
+</header>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
-<section
-    class="hero"
-    id="home"
->
+<section class="hero" id="home">
 
-<div class="container">
+<div class="container hero-content">
 
-<div class="hero-content reveal">
+<div class="hero-text">
 
-<div class="hero-label">
-
-<i class="bi bi-stars"></i>
-
-Technology • Printing • Branding
-
+<div class="hero-badge">
+<i class="fa-solid fa-circle-check"></i>
+Trusted Technology & Branding Partner
 </div>
 
 
 <h1>
-
-Powering Business
+Technology.
 <br>
-
-Through
-<span>Technology.</span>
-
+Printing.
+<br>
+<span>Branding.</span>
 </h1>
 
 
 <p>
-
-Solatech Computers Private Limited provides
-professional computer sales, repairs, networking,
-CCTV, digital printing, DTF branding and large-format
-printing solutions for businesses, organisations and
-individuals.
-
+Solatech Computers Pvt Ltd provides complete technology,
+printing and branding solutions for individuals, businesses,
+organisations and institutions across Mutare and Zimbabwe.
 </p>
 
 
 <div class="hero-buttons">
 
-<a
-    href="#services"
-    class="btn-main"
->
-
+<a href="#services" class="btn btn-primary">
 Explore Our Services
-
-<i class="bi bi-arrow-up-right"></i>
-
+<i class="fa-solid fa-arrow-right"></i>
 </a>
 
-
-<a
-    href="#contact"
-    class="btn-outline"
->
-
-Contact Us
-
-<i class="bi bi-arrow-right"></i>
-
+<a href="#contact" class="btn btn-outline">
+Talk To Us
 </a>
 
 </div>
 
 </div>
 
-</div>
 
+<div class="hero-visual">
 
-<div class="hero-scroll">
+<div class="hero-card">
 
-Scroll to explore
-
-<i class="bi bi-arrow-down"></i>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MARQUEE
-========================================================= -->
-
-<div class="marquee">
-
-<div class="marquee-track">
-
-<span>Computer Sales</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Computer Repairs</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Networking</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>CCTV</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>DTF Printing</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>T-Shirts</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Branding</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Banners</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Canvas</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Gazebos</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Roll-Up Banners</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Business Cards</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Company Profiles</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Computer Sales</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Computer Repairs</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Networking</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>CCTV</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>DTF Printing</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>T-Shirts</span>
-<i class="bi bi-circle-fill"></i>
-
-<span>Branding</span>
-<i class="bi bi-circle-fill"></i>
+<img src="images/hero-printing.jpg"
+alt="Solatech Printing and Technology Services">
 
 </div>
 
-</div>
-
-
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section
-    class="section section-light"
-    id="about"
->
-
-<div class="container">
-
-<div class="row align-items-center g-5">
-
-
-<div class="col-lg-6 reveal">
-
-<div class="about-photo">
-
-<div class="about-badge">
+<div class="floating-card">
 
 <strong>3</strong>
 
@@ -1931,1465 +1431,181 @@ Branches in Mutare
 
 </div>
 
-
-<div class="col-lg-6 reveal">
-
-<div class="section-label">
-Who We Are
-</div>
-
-
-<h2 class="section-title mb-4">
-
-Technology,
-Printing & Branding
-Under One Roof.
-
-</h2>
-
-
-<p class="section-description">
-
-<strong>
-Solatech Computers Private Limited
-</strong>
-
-is a Zimbabwean technology, printing and
-branding company based in Mutare.
-
-</p>
-
-
-<p class="section-description">
-
-We provide complete technology solutions for
-individuals, companies, schools, organisations
-and institutions. Our services range from
-computer sales and repairs to networking,
-CCTV, professional printing and creative branding.
-
-</p>
-
-
-<p class="section-description">
-
-Solatech operates through three branches in Mutare.
-Two branches focus primarily on technology sales,
-computer repairs, networking and CCTV, while our
-specialist branding branch provides DTF printing,
-promotional products and large-format printing.
-
-</p>
-
-
-<a
-    href="#contact"
-    class="btn-main mt-3"
->
-
-Talk To Our Team
-
-<i class="bi bi-arrow-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
+<!-- =====================================================
+     TRUST STRIP
+===================================================== -->
 
-<!-- =========================================================
-     SERVICES
-========================================================= -->
+<div class="trust-strip">
 
-<section
-    class="section"
-    id="services"
->
+<div class="container trust-grid">
 
-<div class="container">
+<div class="trust-item">
 
-
-<div class="row mb-5">
-
-<div class="col-lg-7 reveal">
-
-<div class="section-label">
-Technology Solutions
-</div>
-
-<h2 class="section-title">
-
-Everything Your
-Business Needs.
-
-</h2>
-
-</div>
-
-
-<div class="col-lg-5 reveal">
-
-<p class="section-description">
-
-From hardware and networking to surveillance
-and technical support, Solatech provides
-reliable technology solutions designed
-around your needs.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="row g-4">
-
-
-<!-- 01 -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="service-card">
-
-<div class="service-number">
-01
-</div>
-
-<div class="service-icon">
-<i class="bi bi-laptop"></i>
-</div>
-
-<h3>
-Computer Sales
-</h3>
-
-<p>
-
-Desktops, laptops, monitors, accessories,
-computer components, storage devices and
-other technology products.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 02 -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="service-card">
-
-<div class="service-number">
-02
-</div>
-
-<div class="service-icon">
-<i class="bi bi-tools"></i>
-</div>
-
-<h3>
-Computer Repairs
-</h3>
-
-<p>
-
-Professional computer troubleshooting,
-maintenance, upgrades, operating system
-installation and hardware repairs.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 03 -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="service-card">
-
-<div class="service-number">
-03
-</div>
-
-<div class="service-icon">
-<i class="bi bi-diagram-3"></i>
-</div>
-
-<h3>
-Networking
-</h3>
-
-<p>
-
-Network installation, configuration,
-Wi-Fi solutions, troubleshooting and
-business network support.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 04 -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="service-card">
-
-<div class="service-number">
-04
-</div>
-
-<div class="service-icon">
-<i class="bi bi-camera-video"></i>
-</div>
-
-<h3>
-CCTV Systems
-</h3>
-
-<p>
-
-CCTV equipment supply and installation
-for homes, offices, shops, businesses
-and organisations.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 05 -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="service-card">
-
-<div class="service-number">
-05
-</div>
-
-<div class="service-icon">
-<i class="bi bi-printer"></i>
-</div>
-
-<h3>
-Printers & Accessories
-</h3>
-
-<p>
-
-Printers, printing accessories, consumables
-and technology products for home and
-business environments.
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- 06 -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="service-card">
-
-<div class="service-number">
-06
-</div>
-
-<div class="service-icon">
-<i class="bi bi-headset"></i>
-</div>
-
-<h3>
-IT Support
-</h3>
-
-<p>
-
-Practical technical support, troubleshooting,
-maintenance and technology guidance for
-businesses and individuals.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FULL WIDTH BRANDING BANNER
-========================================================= -->
-
-<section class="image-banner">
-
-<div class="container">
-
-<div class="image-banner-content reveal">
-
-<div class="section-label">
-Solatech Branding
-</div>
-
-<h2>
-
-Turn Your Ideas
-Into Your Brand.
-
-</h2>
-
-<p class="lead mt-4">
-
-Professional DTF printing, promotional products,
-large-format printing and corporate branding
-for businesses, events and organisations.
-
-</p>
-
-<a
-    href="#branding"
-    class="btn-main mt-3"
->
-
-Explore Branding
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     BRANDING
-========================================================= -->
-
-<section
-    class="section section-light"
-    id="branding"
->
-
-<div class="container">
-
-
-<div class="row align-items-end mb-5">
-
-<div class="col-lg-7 reveal">
-
-<div class="section-label">
-Branding Services
-</div>
-
-<h2 class="section-title">
-
-Put Your Brand
-<span class="text-orange">
-Everywhere.
-</span>
-
-</h2>
-
-</div>
-
-
-<div class="col-lg-5 reveal">
-
-<p class="section-description">
-
-Our specialist branding branch creates
-professional branded products for companies,
-events, teams, organisations and individuals.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="row g-4">
-
-
-<!-- T SHIRT -->
-
-<div class="col-md-6 col-lg-3 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/tshirt-1.jpg"
-    alt="Custom DTF T-shirt printing"
->
-
-<div class="product-number">
-01
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Custom T-Shirts
-</h3>
-
-<p>
-
-DTF printed T-shirts for businesses,
-events, teams, churches, schools
-and individuals.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- T SHIRT 2 -->
-
-<div class="col-md-6 col-lg-3 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/tshirt-2.jpg"
-    alt="Custom printed T-shirts"
->
-
-<div class="product-number">
-02
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Corporate T-Shirts
-</h3>
-
-<p>
-
-Professional company-branded shirts
-for teams, staff and promotional campaigns.
-
-</p>
-
-<a href="#contact">
-
-Get Started
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- HOODIE -->
-
-<div class="col-md-6 col-lg-3 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/hoodie.jpg"
-    alt="Branded hoodies"
->
-
-<div class="product-number">
-03
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Hoodies
-</h3>
-
-<p>
-
-Custom branded hoodies for teams,
-companies and promotional campaigns.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CAPS -->
-
-<div class="col-md-6 col-lg-3 reveal delay-3">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/caps.jpg"
-    alt="Branded caps"
->
-
-<div class="product-number">
-04
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Caps
-</h3>
-
-<p>
-
-Custom branded caps for businesses,
-events, teams and promotions.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- MUGS -->
-
-<div class="col-md-6 col-lg-3 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/mugs.jpg"
-    alt="Branded mugs"
->
-
-<div class="product-number">
-05
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Branded Mugs
-</h3>
-
-<p>
-
-Personalised mugs for businesses,
-events, gifts and promotions.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- DIARIES -->
-
-<div class="col-md-6 col-lg-3 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/diaries.jpg"
-    alt="Branded diaries"
->
-
-<div class="product-number">
-06
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Diaries
-</h3>
-
-<p>
-
-Professional branded diaries and
-corporate notebooks.
-
-</p>
-
-<a href="#contact">
-
-Get Started
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- NOTEBOOKS -->
-
-<div class="col-md-6 col-lg-3 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/notebooks.jpg"
-    alt="Branded notebooks"
->
-
-<div class="product-number">
-07
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Notebooks
-</h3>
-
-<p>
-
-Custom notebooks for corporate gifts,
-schools, teams and organisations.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- TOTE -->
-
-<div class="col-md-6 col-lg-3 reveal delay-3">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/branding/tote-bags.jpg"
-    alt="Branded tote bags"
->
-
-<div class="product-number">
-08
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Tote Bags
-</h3>
-
-<p>
-
-Custom printed bags for events,
-businesses and promotional campaigns.
-
-</p>
-
-<a href="#contact">
-
-Brand Yours
-
-<i class="bi bi-arrow-up-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
+<div class="trust-icon">
+<i class="fa-solid fa-laptop"></i>
 </div>
-
-</div>
-
-
-<!-- PROMOTIONAL PRODUCTS -->
-
-<div class="row g-4 mt-2">
-
-
-<div class="col-lg-6 reveal">
-
-<div class="category-feature">
-
-<i class="bi bi-gift"></i>
-
-<h3>
-Promotional Products
-</h3>
-
-<p>
-
-Create memorable branded merchandise
-for your customers and team. We can
-brand diaries, mugs, notebooks, bags
-and other promotional products.
-
-</p>
-
-<a
-    href="#contact"
-    class="btn-main"
->
-
-Request Branding
-
-<i class="bi bi-arrow-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="col-lg-6 reveal">
-
-<div class="category-feature">
-
-<i class="bi bi-badge-ad"></i>
-
-<h3>
-Corporate Branding
-</h3>
-
-<p>
-
-Give your business a professional identity
-through customised apparel, promotional
-products, signage and printed materials.
-
-</p>
-
-<a
-    href="#contact"
-    class="btn-main"
->
-
-Start Your Project
-
-<i class="bi bi-arrow-right"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     LARGE FORMAT
-========================================================= -->
-
-<section
-    class="section"
-    id="large-format"
->
-
-<div class="container">
-
-
-<div class="row mb-5">
-
-<div class="col-lg-7 reveal">
-
-<div class="section-label">
-Large Format Printing
-</div>
-
-<h2 class="section-title">
 
-Big Prints.
+<div>
+<strong>IT Solutions</strong>
 <br>
-
-<span class="text-orange">
-Big Impact.
-</span>
-
-</h2>
+<small>Sales & Support</small>
+</div>
 
 </div>
 
 
-<div class="col-lg-5 reveal">
+<div class="trust-item">
+
+<div class="trust-icon">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+
+<div>
+<strong>Networking</strong>
+<br>
+<small>Business & Home</small>
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<div class="trust-icon">
+<i class="fa-solid fa-print"></i>
+</div>
+
+<div>
+<strong>Printing</strong>
+<br>
+<small>Digital & Large Format</small>
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<div class="trust-icon">
+<i class="fa-solid fa-shirt"></i>
+</div>
+
+<div>
+<strong>Branding</strong>
+<br>
+<small>DTF & Merchandise</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+
+<div class="about-image">
+
+<img src="images/about.jpg"
+alt="Solatech Computers">
+
+<div class="about-badge">
+
+<strong>3</strong>
+
+Branches serving Mutare
+
+</div>
+
+</div>
+
+
+<div>
+
+<span class="section-tag">
+About Solatech
+</span>
+
+<h2 class="section-title">
+Your Complete <span>Technology & Branding</span> Partner
+</h2>
 
 <p class="section-description">
 
-Make your business visible with professional
-large-format printing for indoor and outdoor
-marketing, exhibitions, events and promotions.
+Solatech Computers Private Limited is a Zimbabwean technology,
+printing and branding company located at Shop 7, Manica Chambers,
+Main Street, Mutare.
+
+We provide practical and reliable technology solutions to
+individuals, businesses, organisations and institutions.
 
 </p>
 
-</div>
 
-</div>
+<p class="section-description" style="margin-top:15px;">
 
+With three branches in Mutare, our operations cover computer
+sales and repairs, networking, CCTV solutions, technology sales,
+digital printing, graphic design, branding and large-format
+printing.
 
-<div class="row g-4">
-
-
-<!-- BANNER -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/banners.jpg"
-    alt="Large format banners"
->
-
-<div class="product-number">
-01
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-PVC Banners
-</h3>
-
-<p>
-Professional banners for advertising,
-events, promotions and outdoor branding.
 </p>
 
-<a href="#contact">
-Print Banner
-<i class="bi bi-arrow-up-right"></i>
-</a>
 
+<div class="about-list">
+
+<div>
+<i class="fa-solid fa-check"></i>
+Computer Sales
 </div>
 
+<div>
+<i class="fa-solid fa-check"></i>
+Computer Repairs
 </div>
 
+<div>
+<i class="fa-solid fa-check"></i>
+Networking
 </div>
 
-
-<!-- CANVAS -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/canvas.jpg"
-    alt="Canvas printing"
->
-
-<div class="product-number">
-02
+<div>
+<i class="fa-solid fa-check"></i>
+CCTV Systems
 </div>
 
-</div>
-
-<div class="product-content">
-
-<h3>
-Canvas Printing
-</h3>
-
-<p>
-High-quality canvas prints for décor,
-artwork, portraits and displays.
-</p>
-
-<a href="#contact">
-Print Canvas
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- GAZEBO -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/gazebo.jpg"
-    alt="Branded gazebo"
->
-
-<div class="product-number">
-03
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Branded Gazebos
-</h3>
-
-<p>
-Professional branded gazebos for events,
-promotions, exhibitions and outdoor marketing.
-</p>
-
-<a href="#contact">
-Brand Gazebo
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- TEARDROP -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/teardrop.jpg"
-    alt="Teardrop banner"
->
-
-<div class="product-number">
-04
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Teardrop Banners
-</h3>
-
-<p>
-Eye-catching portable flags for outdoor
-marketing and events.
-</p>
-
-<a href="#contact">
-Get Started
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ROLL UP -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/rollup-banner.jpg"
-    alt="Roll up banner"
->
-
-<div class="product-number">
-05
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Roll-Up Banners
-</h3>
-
-<p>
-Portable display systems for exhibitions,
-shops, conferences and corporate events.
-</p>
-
-<a href="#contact">
-Print Yours
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- X FRAME -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/large-format/x-frame.jpg"
-    alt="X frame banner"
->
-
-<div class="product-number">
-06
-</div>
-
-</div>
-
-<div class="product-content">
-
-<h3>
-X-Frame Banners
-</h3>
-
-<p>
-Affordable portable displays for promotions,
-events and indoor advertising.
-</p>
-
-<a href="#contact">
-Print Yours
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CORPORATE PRINTING
-========================================================= -->
-
-<section
-    class="section section-light"
-    id="printing"
->
-
-<div class="container">
-
-
-<div class="row mb-5">
-
-<div class="col-lg-7 reveal">
-
-<div class="section-label">
+<div>
+<i class="fa-solid fa-check"></i>
 Digital Printing
 </div>
 
-<h2 class="section-title">
-
-Professional Printing
-For Every Occasion.
-
-</h2>
-
+<div>
+<i class="fa-solid fa-check"></i>
+Graphic Design
 </div>
 
+<div>
+<i class="fa-solid fa-check"></i>
+DTF Branding
+</div>
 
-<div class="col-lg-5 reveal">
-
-<p class="section-description">
-
-From everyday office documents to premium
-corporate and event materials, Solatech
-provides professional printing services.
-
-</p>
-
+<div>
+<i class="fa-solid fa-check"></i>
+Large Format Printing
 </div>
 
 </div>
-
-
-<div class="row g-4">
-
-
-<!-- BUSINESS CARDS -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/business-cards.jpg"
-    alt="Business cards"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Business Cards
-</h3>
-
-<p>
-Professional business cards that make
-your first impression count.
-</p>
-
-<a href="#contact">
-Design & Print
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- COMPANY PROFILE -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/company-profile.jpg"
-    alt="Company profiles"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Company Profiles
-</h3>
-
-<p>
-Professional company profile design,
-printing and presentation materials.
-</p>
-
-<a href="#contact">
-Start Project
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- WEDDING -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/wedding-cards.jpg"
-    alt="Wedding cards"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Wedding Cards
-</h3>
-
-<p>
-Beautiful customised wedding invitations
-and event stationery.
-</p>
-
-<a href="#contact">
-Design & Print
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- FLYERS -->
-
-<div class="col-md-6 col-lg-4 reveal">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/flyers.jpg"
-    alt="Flyers"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Flyers & Posters
-</h3>
-
-<p>
-Promotional flyers and posters for
-businesses, events and campaigns.
-</p>
-
-<a href="#contact">
-Print Flyers
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- BROCHURES -->
-
-<div class="col-md-6 col-lg-4 reveal delay-1">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/brochures.jpg"
-    alt="Brochures"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Brochures
-</h3>
-
-<p>
-Professional brochures and marketing
-materials for your organisation.
-</p>
-
-<a href="#contact">
-Print Brochures
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PAPERS -->
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-    src="images/printing/specialty-paper.jpg"
-    alt="Specialty paper printing"
->
-
-</div>
-
-<div class="product-content">
-
-<h3>
-Bond & Specialty Papers
-</h3>
-
-<p>
-Printing on bond papers and a range of
-specialty papers for professional projects.
-</p>
-
-<a href="#contact">
-Ask Us
-<i class="bi bi-arrow-up-right"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -3398,393 +1614,153 @@ Ask Us
 </section>
 
 
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-<!-- =========================================================
-     COUNTERS
-========================================================= -->
-
-<section class="counter-section">
-
-<div class="container">
-
-<div class="row">
-
-
-<div class="col-md-3 counter-box">
-
-<div
-    class="counter"
-    data-target="3"
->
-0
-</div>
-
-<p>
-Branches
-</p>
-
-</div>
-
-
-<div class="col-md-3 counter-box">
-
-<div
-    class="counter"
-    data-target="500"
->
-0
-</div>
-
-<p>
-Clients Served+
-</p>
-
-</div>
-
-
-<div class="col-md-3 counter-box">
-
-<div
-    class="counter"
-    data-target="100"
->
-0
-</div>
-
-<p>
-Solutions Delivered+
-</p>
-
-</div>
-
-
-<div class="col-md-3 counter-box">
-
-<div
-    class="counter"
-    data-target="10"
->
-0
-</div>
-
-<p>
-Years Experience+
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     OUR APPROACH
-========================================================= -->
-
-<section class="section section-dark">
+<section class="services" id="services">
 
 <div class="container">
 
+<div class="section-heading">
 
-<div class="row mb-5">
-
-<div class="col-lg-7 reveal">
-
-<div class="section-label">
-Our Process
-</div>
-
-<h2 class="section-title">
-
-Simple.
-Professional.
-Reliable.
-
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="row g-4">
-
-
-<div class="col-md-6 col-lg-3 reveal">
-
-<div class="process-card">
-
-<div class="process-number">
-01
-</div>
-
-<h3>
-Understand
-</h3>
-
-<p>
-
-We listen to your requirements and
-understand exactly what you need.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 col-lg-3 reveal delay-1">
-
-<div class="process-card">
-
-<div class="process-number">
-02
-</div>
-
-<h3>
-Design
-</h3>
-
-<p>
-
-Our team develops a practical technology,
-printing or branding solution.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 col-lg-3 reveal delay-2">
-
-<div class="process-card">
-
-<div class="process-number">
-03
-</div>
-
-<h3>
-Deliver
-</h3>
-
-<p>
-
-We supply, install, print or implement
-your project professionally.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 col-lg-3 reveal delay-3">
-
-<div class="process-card">
-
-<div class="process-number">
-04
-</div>
-
-<h3>
-Support
-</h3>
-
-<p>
-
-Our relationship continues with technical
-support and future solutions.
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     THREE BRANCHES
-========================================================= -->
-
-<section
-    class="section"
-    id="branches"
->
-
-<div class="container">
-
-
-<div class="text-center mb-5 reveal">
-
-<div class="section-label">
-Our Locations
-</div>
-
-<h2 class="section-title">
-
-Three Branches.
-<br>
-
-<span class="text-orange">
-One Solatech.
+<span class="section-tag">
+What We Do
 </span>
 
+<h2 class="section-title">
+Complete <span>Technology Solutions</span>
 </h2>
 
-<p
-    class="section-description mx-auto mt-3"
-    style="max-width:720px;"
->
-
-Our three branches in Mutare allow us to
-serve customers across technology, repairs,
-networking, printing and branding.
-
+<p class="section-description">
+From computers and networking to printing and security,
+Solatech provides dependable solutions under one roof.
 </p>
 
 </div>
 
 
-<div class="row g-4">
+<div class="service-grid">
 
 
-<!-- BRANCH 1 -->
+<div class="service-card">
 
-<div class="col-lg-4 reveal">
-
-<div class="branch-card">
-
-<div class="branch-icon">
-
-<i class="bi bi-laptop"></i>
-
+<div class="service-icon">
+<i class="fa-solid fa-computer"></i>
 </div>
 
-<h3>
-Technology Sales
-</h3>
+<h3>Computer Sales</h3>
 
 <p>
-
-Our technology sales branch supplies
-computers, laptops, printers, accessories,
-software and other technology products.
-
+Desktops, laptops, monitors, accessories, storage devices,
+printers and other technology products.
 </p>
 
-<a
-    href="#contact"
-    class="btn-main"
->
-
-Enquire Now
-
-<i class="bi bi-arrow-right"></i>
-
+<a href="#contact" class="service-link">
+Learn More →
 </a>
 
 </div>
 
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-screwdriver-wrench"></i>
 </div>
 
-
-<!-- BRANCH 2 -->
-
-<div class="col-lg-4 reveal delay-1">
-
-<div class="branch-card">
-
-<div class="branch-icon">
-
-<i class="bi bi-tools"></i>
-
-</div>
-
-<h3>
-Repairs & Networking
-</h3>
+<h3>Computer Repairs</h3>
 
 <p>
-
-Professional computer repairs, maintenance,
-network installation, troubleshooting,
-Wi-Fi solutions and CCTV services.
-
+Hardware diagnostics, software installation, operating system
+support, upgrades, troubleshooting and maintenance.
 </p>
 
-<a
-    href="#contact"
-    class="btn-main"
->
-
-Get Support
-
-<i class="bi bi-arrow-right"></i>
-
+<a href="#contact" class="service-link">
+Learn More →
 </a>
 
 </div>
 
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-network-wired"></i>
 </div>
 
-
-<!-- BRANCH 3 -->
-
-<div class="col-lg-4 reveal delay-2">
-
-<div class="branch-card">
-
-<div class="branch-icon">
-
-<i class="bi bi-palette"></i>
-
-</div>
-
-<h3>
-Branding & Printing
-</h3>
+<h3>Networking</h3>
 
 <p>
-
-Our specialist branding branch provides
-DTF printing, T-shirts, mugs, diaries,
-banners, canvas, gazebos and promotional
-branding.
-
+Network installation, Wi-Fi systems, structured cabling,
+routers, switches, configuration and troubleshooting.
 </p>
 
-<a
-    href="#branding"
-    class="btn-main"
->
-
-Explore Branding
-
-<i class="bi bi-arrow-right"></i>
-
+<a href="#contact" class="service-link">
+Learn More →
 </a>
 
 </div>
 
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-camera"></i>
 </div>
 
+<h3>CCTV & Security</h3>
+
+<p>
+CCTV cameras, installation, configuration, monitoring and
+security solutions for homes and businesses.
+</p>
+
+<a href="#contact" class="service-link">
+Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-file-lines"></i>
+</div>
+
+<h3>Digital Printing</h3>
+
+<p>
+Bond paper printing, certificates, business documents,
+company profiles, flyers, business cards and wedding cards.
+</p>
+
+<a href="#contact" class="service-link">
+Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fa-solid fa-pen-ruler"></i>
+</div>
+
+<h3>Graphic Design</h3>
+
+<p>
+Professional company profiles, logos, posters, flyers,
+business cards, wedding stationery and marketing materials.
+</p>
+
+<a href="#contact" class="service-link">
+Learn More →
+</a>
+
+</div>
 
 </div>
 
@@ -3793,193 +1769,88 @@ Explore Branding
 </section>
 
 
+<!-- =====================================================
+     BRANDING
+===================================================== -->
 
-<!-- =========================================================
-     PROJECT GALLERY
-========================================================= -->
+<section id="branding" class="branding">
 
-<section class="section section-light">
-
-<div class="container">
+<div class="container branding-grid">
 
 
-<div class="row align-items-end mb-5">
+<div class="branding-gallery">
 
-<div class="col-lg-7 reveal">
+<img src="images/tshirt.jpg" alt="DTF T-shirt Branding">
 
-<div class="section-label">
-Our Work
+<img src="images/diary.jpg" alt="Branded Diaries">
+
+<img src="images/mug.jpg" alt="Branded Mug">
+
+<img src="images/cap.jpg" alt="Branded Cap">
+
 </div>
+
+
+<div class="branding-content">
+
+<span class="section-tag">
+Branding Division
+</span>
 
 <h2 class="section-title">
-
-Ideas Made
-Real.
-
+Turn Your <span>Brand Into Reality</span>
 </h2>
-
-</div>
-
-<div class="col-lg-5 reveal">
 
 <p class="section-description">
 
-A selection of the products and services
-we provide to businesses, organisations
-and individuals.
+Our dedicated branding branch specialises in customised
+merchandise and promotional products for companies,
+organisations, events, schools and individuals.
 
 </p>
 
-</div>
 
-</div>
+<ul>
 
+<li>
+<i class="fa-solid fa-check-circle"></i>
+DTF T-shirt printing
+</li>
 
-<div class="row g-3">
+<li>
+<i class="fa-solid fa-check-circle"></i>
+Branded diaries and notebooks
+</li>
 
+<li>
+<i class="fa-solid fa-check-circle"></i>
+Custom mugs and drinkware
+</li>
 
-<div class="col-md-6 col-lg-4 reveal">
+<li>
+<i class="fa-solid fa-check-circle"></i>
+Caps and promotional clothing
+</li>
 
-<div class="gallery-item">
+<li>
+<i class="fa-solid fa-check-circle"></i>
+Corporate promotional merchandise
+</li>
 
-<img
-    src="images/branding/tshirt-printing.jpg"
-    alt="T-shirt branding"
->
+<li>
+<i class="fa-solid fa-check-circle"></i>
+Custom event and campaign branding
+</li>
 
-<div class="gallery-overlay">
-
-<div>
-
-<h3>
-T-Shirt Branding
-</h3>
-
-<p>
-DTF custom printing
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+</ul>
 
 
-<div class="col-md-6 col-lg-4 reveal delay-1">
+<a href="#contact" class="btn"
+style="background:var(--green);color:#fff;margin-top:20px;">
 
-<div class="gallery-item">
+Request Branding Quote
 
-<img
-    src="images/large-format/outdoor-branding.jpg"
-    alt="Outdoor branding"
->
-
-<div class="gallery-overlay">
-
-<div>
-
-<h3>
-Outdoor Branding
-</h3>
-
-<p>
-Large format solutions
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6 col-lg-4 reveal delay-2">
-
-<div class="gallery-item">
-
-<img
-    src="images/printing/business-cards.jpg"
-    alt="Business card printing"
->
-
-<div class="gallery-overlay">
-
-<div>
-
-<h3>
-Corporate Printing
-</h3>
-
-<p>
-Business & marketing materials
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CTA
-========================================================= -->
-
-<section class="cta-section">
-
-<div class="container">
-
-<div class="row align-items-center g-4">
-
-<div class="col-lg-8 reveal">
-
-<div class="section-label" style="color:white;">
-Let's Work Together
-</div>
-
-<h2>
-
-Have A Project
-In Mind?
-
-</h2>
-
-<p class="lead mb-0">
-
-Whether you need technology, printing or
-professional branding, Solatech is ready
-to help.
-
-</p>
-
-</div>
-
-
-<div class="col-lg-4 text-lg-end reveal">
-
-<a
-    href="#contact"
-    class="btn-white"
->
-
-Start Your Project
-
-<i class="bi bi-arrow-up-right"></i>
+<i class="fa-solid fa-arrow-right"></i>
 
 </a>
 
@@ -3987,200 +1858,330 @@ Start Your Project
 
 </div>
 
-</div>
-
 </section>
 
 
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section
-    class="section contact-section"
-    id="contact"
->
+<section class="products" id="products">
 
 <div class="container">
 
+<div class="section-heading">
 
-<div class="row align-items-center g-5">
-
-
-<div class="col-lg-6 reveal">
-
-<div class="section-label">
-Contact Solatech
-</div>
+<span class="section-tag"
+style="background:rgba(255,255,255,.1);color:#fff;">
+Our Products
+</span>
 
 <h2 class="section-title">
-
-Let's Build
-Something Great.
-
+Everything Your <span>Business Needs</span>
 </h2>
 
-<p class="lead text-light mt-4">
-
-Visit us at Shop 7, Manica Chambers,
-Main Street, Mutare, Zimbabwe.
-
-</p>
-
-<p class="text-light">
-
-Talk to our team about computers,
-repairs, networking, CCTV, printing,
-branding or large-format projects.
-
+<p class="section-description">
+Technology products, printing products and branded merchandise
+available through Solatech Computers.
 </p>
 
 </div>
 
 
-<div class="col-lg-6 reveal">
-
-<div class="contact-box">
-
-<h3 class="mb-4">
-Get In Touch
-</h3>
+<div class="product-grid">
 
 
-<div class="contact-info">
+<div class="product-card">
 
-<i class="bi bi-telephone-fill"></i>
+<img src="images/computer.jpg" alt="Computers">
+
+<div class="product-card-body">
+
+<h3>Computers</h3>
+
+<p>
+Laptops, desktops, monitors and accessories.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="images/printer.jpg" alt="Printers">
+
+<div class="product-card-body">
+
+<h3>Printers</h3>
+
+<p>
+Printers, cartridges, toners and printing accessories.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="images/cctv.jpg" alt="CCTV">
+
+<div class="product-card-body">
+
+<h3>CCTV Systems</h3>
+
+<p>
+Security cameras and surveillance equipment.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="images/tshirt.jpg" alt="T-shirt Printing">
+
+<div class="product-card-body">
+
+<h3>Branded T-Shirts</h3>
+
+<p>
+Custom DTF printed clothing for individuals and businesses.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LARGE FORMAT
+===================================================== -->
+
+<section class="large-format">
+
+<div class="container large-format-grid">
+
 
 <div>
 
-<strong>
-0775 799 634
-</strong>
+<span class="section-tag"
+style="background:rgba(255,255,255,.1);color:#fff;">
+Large Format Printing
+</span>
 
-<br>
+<h2 class="section-title">
+Make Your Brand <span>Impossible To Ignore</span>
+</h2>
 
-<small>
-Call / WhatsApp
-</small>
+<p class="section-description">
 
-</div>
+Our large-format printing services help businesses,
+organisations and events create highly visible branding
+materials for indoor and outdoor marketing.
 
-</div>
-
-
-<div class="contact-info">
-
-<i class="bi bi-telephone-fill"></i>
-
-<div>
-
-<strong>
-0783 527 449
-</strong>
-
-<br>
-
-<small>
-Call / WhatsApp
-</small>
-
-</div>
-
-</div>
+</p>
 
 
-<div class="contact-info">
-
-<i class="bi bi-telephone-fill"></i>
+<div class="format-list">
 
 <div>
-
-<strong>
-0714 367 000
-</strong>
-
-<br>
-
-<small>
-Call / WhatsApp
-</small>
-
+<i class="fa-solid fa-flag"></i>
+Banners
 </div>
-
-</div>
-
-
-<div class="contact-info">
-
-<i class="bi bi-telephone-fill"></i>
 
 <div>
-
-<strong>
-0714 367 002
-</strong>
-
-<br>
-
-<small>
-Call / WhatsApp
-</small>
-
+<i class="fa-solid fa-image"></i>
+Canvas Printing
 </div>
-
-</div>
-
-
-<div class="contact-info">
-
-<i class="bi bi-geo-alt-fill"></i>
 
 <div>
+<i class="fa-solid fa-tent"></i>
+Gazebos
+</div>
 
-<strong>
-Shop 7, Manica Chambers
-</strong>
+<div>
+<i class="fa-solid fa-arrow-up"></i>
+Teardrops
+</div>
 
-<br>
+<div>
+<i class="fa-solid fa-rectangle-ad"></i>
+Roll-Up Banners
+</div>
 
-Main Street, Mutare, Zimbabwe
+<div>
+<i class="fa-solid fa-border-all"></i>
+X-Frame Banners
+</div>
+
+<div>
+<i class="fa-solid fa-store"></i>
+Shop Branding
+</div>
+
+<div>
+<i class="fa-solid fa-bullhorn"></i>
+Event Branding
+</div>
+
+</div>
+
+</div>
+
+
+<div class="format-image">
+
+<img src="images/large-format.jpg"
+alt="Large Format Printing">
 
 </div>
 
 </div>
 
-
-<div class="mt-4">
-
-<a
-    href="tel:0775799634"
-    class="btn-main"
->
-
-Call Solatech
-
-<i class="bi bi-telephone"></i>
-
-</a>
+</section>
 
 
-<a
-    href="https://wa.me/263775799634"
-    target="_blank"
-    class="btn-main"
-    style="margin-left:8px;"
->
+<!-- =====================================================
+     STATS
+===================================================== -->
 
-WhatsApp
+<section class="stats">
 
-<i class="bi bi-whatsapp"></i>
+<div class="container stats-grid">
 
-</a>
+<div class="stat">
+
+<strong>3</strong>
+
+<span>Branches in Mutare</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>10+</strong>
+
+<span>Technology Services</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>100%</strong>
+
+<span>Customer Focus</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>1</strong>
+
+<span>Complete Solution</span>
 
 </div>
 
 </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section id="process">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+How We Work
+</span>
+
+<h2 class="section-title">
+Simple. Fast. <span>Professional.</span>
+</h2>
+
+<p class="section-description">
+We make it easy to move from an idea to a finished technology,
+printing or branding solution.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-card">
+
+<div class="process-number">01</div>
+
+<h3>Consultation</h3>
+
+<p>
+Tell us what you need and our team will help determine the
+best solution.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">02</div>
+
+<h3>Design & Planning</h3>
+
+<p>
+We prepare designs, specifications and recommendations
+according to your requirements.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">03</div>
+
+<h3>Production</h3>
+
+<p>
+Our team handles printing, installation, configuration,
+repairs or branding.
+</p>
+
+</div>
+
+
+<div class="process-card">
+
+<div class="process-number">04</div>
+
+<h3>Delivery</h3>
+
+<p>
+We complete your project and provide support where required.
+</p>
 
 </div>
 
@@ -4191,183 +2192,309 @@ WhatsApp
 </section>
 
 
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-<!-- =========================================================
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+Contact Us
+</span>
+
+<h2 class="section-title">
+Let's Build Something <span>Great</span>
+</h2>
+
+<p class="section-description">
+Have a technology, printing or branding project?
+Speak to Solatech Computers today.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p>
+Visit our Mutare branch or contact our team using the
+details below.
+</p>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>
+<strong>Address</strong><br>
+Shop 7, Manica Chambers<br>
+Main Street, Mutare<br>
+Zimbabwe
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<span>
+<strong>Phone</strong><br>
+0775 799 634<br>
+0783 527 449<br>
+0714 367 000<br>
+0714 367 002
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-building"></i>
+
+<span>
+<strong>Branches</strong><br>
+3 branches across Mutare
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>
+<strong>Business Hours</strong><br>
+Monday - Saturday<br>
+8:00 AM - 5:00 PM
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<form onsubmit="sendWhatsApp(event)">
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>Name</label>
+
+<input type="text"
+id="name"
+placeholder="Your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Phone</label>
+
+<input type="tel"
+id="phone"
+placeholder="Your phone number"
+required>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Service Required</label>
+
+<select id="service">
+
+<option>Computer Sales</option>
+<option>Computer Repair</option>
+<option>Networking</option>
+<option>CCTV</option>
+<option>Printing</option>
+<option>Graphic Design</option>
+<option>DTF T-Shirt Branding</option>
+<option>Large Format Printing</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>Message</label>
+
+<textarea id="message"
+placeholder="Tell us what you need..."></textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<button class="btn"
+style="background:var(--green);color:#fff;border:0;cursor:pointer;"
+type="submit">
+
+Send Enquiry
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GOOGLE MAP
+===================================================== -->
+
+<section class="map-section">
+
+<iframe
+class="map"
+src="https://www.google.com/maps?q=-18.973771,32.670650&z=17&output=embed"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+allowfullscreen>
+</iframe>
+
+</section>
+
+
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
 <div class="container">
 
+<div class="footer-grid">
 
-<div class="row g-5">
 
+<div class="footer-col">
 
-<div class="col-lg-4">
+<div class="footer-logo">
 
-<div class="d-flex align-items-center mb-3">
+<img src="images/logo.png"
+alt="Solatech Computers">
 
-<img
-    src="images/logo.png"
-    class="footer-logo"
-    alt="Solatech Computers"
->
-
-<h4 class="ms-3 mb-0">
-
-SOLATECH
-<span style="color:#ff5b22;">
-COMPUTERS
-</span>
-
-</h4>
+<span>Solatech Computers</span>
 
 </div>
-
-
-<p class="footer-description">
-
-Solatech Computers Private Limited provides
-technology, printing and branding solutions
-for businesses, organisations and individuals
-in Zimbabwe.
-
-</p>
-
-</div>
-
-
-<div class="col-md-4 col-lg-2">
-
-<h4>
-Company
-</h4>
-
-<a href="#home">
-Home
-</a>
-
-<a href="#about">
-About Us
-</a>
-
-<a href="#services">
-Services
-</a>
-
-<a href="#branches">
-Branches
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-</div>
-
-
-<div class="col-md-4 col-lg-3">
-
-<h4>
-Services
-</h4>
-
-<a href="#services">
-Computer Sales
-</a>
-
-<a href="#services">
-Computer Repairs
-</a>
-
-<a href="#services">
-Networking
-</a>
-
-<a href="#services">
-CCTV
-</a>
-
-<a href="#branding">
-Branding
-</a>
-
-<a href="#printing">
-Printing
-</a>
-
-</div>
-
-
-<div class="col-md-4 col-lg-3">
-
-<h4>
-Visit Us
-</h4>
 
 <p>
 
-Shop 7, Manica Chambers
-<br>
-
-Main Street
-<br>
-
-Mutare, Zimbabwe
+Technology, printing, branding and digital solutions
+for businesses and individuals in Mutare and beyond.
 
 </p>
 
 
-<p>
+<div class="socials">
 
-<strong style="color:white;">
-0775 799 634
-</strong>
+<a href="#">
+<i class="fa-brands fa-facebook-f"></i>
+</a>
 
-</p>
+<a href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
 
+<a href="#">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
-<p>
-
-<strong style="color:white;">
-0783 527 449
-</strong>
-
-</p>
+<a href="#">
+<i class="fa-brands fa-tiktok"></i>
+</a>
 
 </div>
 
+</div>
+
+
+<div class="footer-col">
+
+<h4>Company</h4>
+
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#branding">Branding</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>Services</h4>
+
+<a href="#services">Computer Sales</a>
+<a href="#services">Computer Repairs</a>
+<a href="#services">Networking</a>
+<a href="#services">CCTV</a>
+<a href="#branding">DTF Branding</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>Printing</h4>
+
+<a href="#services">Digital Printing</a>
+<a href="#branding">T-Shirt Printing</a>
+<a href="#branding">Corporate Branding</a>
+<a href="#contact">Large Format</a>
+<a href="#contact">Graphic Design</a>
+
+</div>
 
 </div>
 
 
 <div class="footer-bottom">
 
-
-<p class="mb-2">
-
-© <span id="year"></span>
-Solatech Computers Private Limited.
-All Rights Reserved.
-
-</p>
-
-
-<p style="font-size:14px;">
-
-Website developed by
-
-<span class="developer">
-PulserByte
+<span>
+© 2026 Solatech Computers Pvt Ltd. All Rights Reserved.
 </span>
 
-&nbsp; | &nbsp;
-
-0716 440 832
-
-</p>
-
+<span>
+Website developed by <strong>Pulserbyte</strong>
+</span>
 
 </div>
 
@@ -4376,118 +2503,78 @@ PulserByte
 </footer>
 
 
+<!-- =====================================================
+     WHATSAPP BUTTON
+===================================================== -->
 
-<!-- =========================================================
-     WHATSAPP
-========================================================= -->
+<a class="whatsapp"
+href="https://wa.me/263775799634?text=Hello%20Solatech%20Computers%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+target="_blank"
+aria-label="WhatsApp">
 
-<a
-    href="https://wa.me/263775799634"
-    class="whatsapp-button"
-    target="_blank"
-    aria-label="WhatsApp Solatech"
->
-
-<i class="bi bi-whatsapp"></i>
+<i class="fa-brands fa-whatsapp"></i>
 
 </a>
 
 
-
-<!-- =========================================================
-     BACK TO TOP
-========================================================= -->
-
-<button
-    class="back-top"
-    id="backTop"
-    aria-label="Back to top"
->
-
-<i class="bi bi-arrow-up"></i>
-
-</button>
-
-
-
-<!-- =========================================================
-     CHATBOT BUTTON
-========================================================= -->
-
-<button
-    class="chat-button"
-    id="chatButton"
-    aria-label="Open Solatech chatbot"
->
-
-<i class="bi bi-chat-dots-fill"></i>
-
-</button>
-
-
-
-<!-- =========================================================
+<!-- =====================================================
      CHATBOT
-========================================================= -->
+===================================================== -->
 
-<div
-    class="chat-window"
-    id="chatWindow"
->
+<button class="chat-button"
+id="chatButton"
+aria-label="Open Chatbot">
+
+<i class="fa-solid fa-comments"></i>
+
+</button>
+
+
+<div class="chat-box" id="chatBox">
 
 <div class="chat-header">
 
 <div>
 
-<strong>
-Solatech Assistant
-</strong>
+<strong>Solatech Assistant</strong>
 
-<br>
-
-<small>
-Online • How can we help?
-</small>
+<small>How can we help?</small>
 
 </div>
 
-
-<button
-    class="chat-close"
-    id="closeChat"
->
-
-<i class="bi bi-x-lg"></i>
-
+<button class="chat-close" id="chatClose">
+<i class="fa-solid fa-xmark"></i>
 </button>
 
 </div>
 
 
-<div
-    class="chat-body"
-    id="chatBody"
->
+<div class="chat-messages" id="chatMessages">
 
-<div class="bot-message">
+<div class="message bot">
 
 Hello! 👋 Welcome to Solatech Computers.
 
-I can help you with:
+How can we help you today?
 
 <br><br>
 
-• Computers<br>
-• Repairs<br>
-• Networking<br>
-• CCTV<br>
-• Printing<br>
-• DTF Branding<br>
-• Banners & Large Format
+You can ask about:
 
-<br><br>
-
-What would you like to know?
+<br>
+• Computers
+<br>
+• Repairs
+<br>
+• Networking
+<br>
+• CCTV
+<br>
+• Printing
+<br>
+• T-shirt branding
+<br>
+• Large format printing
 
 </div>
 
@@ -4497,16 +2584,13 @@ What would you like to know?
 <div class="chat-input">
 
 <input
-    type="text"
-    id="chatInput"
-    placeholder="Type your message..."
->
+type="text"
+id="chatInput"
+placeholder="Type your question...">
 
-<button
-    id="sendMessage"
->
+<button id="chatSend">
 
-<i class="bi bi-send-fill"></i>
+<i class="fa-solid fa-paper-plane"></i>
 
 </button>
 
@@ -4515,668 +2599,308 @@ What would you like to know?
 </div>
 
 
-
-<!-- =========================================================
-     BOOTSTRAP JS
-========================================================= -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
-/* =========================================================
-   PRELOADER
-========================================================= */
+/* MOBILE MENU */
 
-window.addEventListener("load", function () {
+const menuBtn =
+document.getElementById("menuBtn");
 
-    const preloader =
-        document.getElementById("preloader");
+const navLinks =
+document.getElementById("navLinks");
 
-    setTimeout(function () {
+menuBtn.addEventListener("click",()=>{
 
-        preloader.style.opacity = "0";
-
-        setTimeout(function () {
-
-            preloader.style.display = "none";
-
-        }, 600);
-
-    }, 500);
+navLinks.classList.toggle("active");
 
 });
 
 
-/* =========================================================
-   NAVBAR SCROLL
-========================================================= */
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
 
-window.addEventListener("scroll", function () {
+link.addEventListener("click",()=>{
 
-    const navbar =
-        document.querySelector(".navbar");
+navLinks.classList.remove("active");
 
-    if (window.scrollY > 60) {
-
-        navbar.classList.add("scrolled");
-
-    } else {
-
-        navbar.classList.remove("scrolled");
-
-    }
+});
 
 });
 
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-function revealElements() {
-
-    const elements =
-        document.querySelectorAll(".reveal");
-
-    elements.forEach(function (element) {
-
-        const position =
-            element.getBoundingClientRect().top;
-
-        if (position < window.innerHeight - 70) {
-
-            element.classList.add("active");
-
-        }
-
-    });
-
-}
-
-window.addEventListener(
-    "scroll",
-    revealElements
-);
-
-window.addEventListener(
-    "load",
-    revealElements
-);
-
-
-/* =========================================================
-   COUNTERS
-========================================================= */
-
-let countersStarted = false;
-
-
-function startCounters() {
-
-    const section =
-        document.querySelector(".counter-section");
-
-    if (!section) return;
-
-
-    const position =
-        section.getBoundingClientRect().top;
-
-
-    if (
-        position < window.innerHeight &&
-        !countersStarted
-    ) {
-
-        countersStarted = true;
-
-
-        const counters =
-            document.querySelectorAll(".counter");
-
-
-        counters.forEach(function (counter) {
-
-            const target =
-                parseInt(
-                    counter.getAttribute("data-target")
-                );
-
-
-            let current = 0;
-
-
-            const increment =
-                Math.max(
-                    1,
-                    Math.ceil(target / 80)
-                );
-
-
-            const timer =
-                setInterval(function () {
-
-                    current += increment;
-
-
-                    if (current >= target) {
-
-                        current = target;
-
-                        clearInterval(timer);
-
-                    }
-
-
-                    counter.textContent =
-                        current;
-
-                }, 25);
-
-        });
-
-    }
-
-}
-
-window.addEventListener(
-    "scroll",
-    startCounters
-);
-
-
-/* =========================================================
-   YEAR
-========================================================= */
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-
-/* =========================================================
-   CHATBOT
-========================================================= */
+/* CHATBOT */
 
 const chatButton =
-    document.getElementById("chatButton");
+document.getElementById("chatButton");
 
-const chatWindow =
-    document.getElementById("chatWindow");
+const chatBox =
+document.getElementById("chatBox");
 
-const closeChat =
-    document.getElementById("closeChat");
+const chatClose =
+document.getElementById("chatClose");
 
-const sendMessage =
-    document.getElementById("sendMessage");
+const chatSend =
+document.getElementById("chatSend");
 
 const chatInput =
-    document.getElementById("chatInput");
+document.getElementById("chatInput");
 
-const chatBody =
-    document.getElementById("chatBody");
+const chatMessages =
+document.getElementById("chatMessages");
 
 
-chatButton.addEventListener(
-    "click",
-    function () {
+chatButton.addEventListener("click",()=>{
 
-        if (
-            chatWindow.style.display === "block"
-        ) {
+chatBox.classList.toggle("active");
 
-            chatWindow.style.display = "none";
+});
 
-        } else {
 
-            chatWindow.style.display = "block";
+chatClose.addEventListener("click",()=>{
 
-            chatInput.focus();
+chatBox.classList.remove("active");
 
-        }
+});
 
-    }
-);
 
+function addMessage(text,type){
 
-closeChat.addEventListener(
-    "click",
-    function () {
+const div =
+document.createElement("div");
 
-        chatWindow.style.display = "none";
+div.className =
+"message " + type;
 
-    }
-);
+div.innerHTML =
+text;
 
+chatMessages.appendChild(div);
 
-/* =========================================================
-   CHAT RESPONSE
-========================================================= */
-
-function sendChatMessage() {
-
-    const message =
-        chatInput.value.trim();
-
-
-    if (message === "") {
-        return;
-    }
-
-
-    /* USER MESSAGE */
-
-    const userMessage =
-        document.createElement("div");
-
-    userMessage.className =
-        "user-message";
-
-    userMessage.textContent =
-        message;
-
-    chatBody.appendChild(userMessage);
-
-
-    chatInput.value = "";
-
-
-    chatBody.scrollTop =
-        chatBody.scrollHeight;
-
-
-    /* BOT RESPONSE */
-
-    setTimeout(function () {
-
-        const botMessage =
-            document.createElement("div");
-
-        botMessage.className =
-            "bot-message";
-
-
-        const text =
-            message.toLowerCase();
-
-
-        let reply =
-            "Thank you for contacting Solatech Computers. Please call 0775 799 634, 0783 527 449, 0714 367 000 or 0714 367 002 for assistance.";
-
-
-        if (
-            text.includes("computer") ||
-            text.includes("laptop")
-        ) {
-
-            reply =
-                "We sell computers, laptops, monitors, accessories, components and other technology products. Contact us for current availability and pricing.";
-
-        }
-
-
-        else if (
-            text.includes("repair") ||
-            text.includes("fix")
-        ) {
-
-            reply =
-                "Our technicians provide computer troubleshooting, repairs, maintenance, upgrades and software installation.";
-
-        }
-
-
-        else if (
-            text.includes("network") ||
-            text.includes("wifi")
-        ) {
-
-            reply =
-                "We provide network installation, configuration, Wi-Fi solutions, troubleshooting and business networking support.";
-
-        }
-
-
-        else if (
-            text.includes("cctv") ||
-            text.includes("camera")
-        ) {
-
-            reply =
-                "We supply and install CCTV surveillance systems for homes, shops, offices, businesses and organisations.";
-
-        }
-
-
-        else if (
-            text.includes("tshirt") ||
-            text.includes("t-shirt") ||
-            text.includes("shirt") ||
-            text.includes("dtf")
-        ) {
-
-            reply =
-                "Our branding branch provides DTF printing on T-shirts and other suitable garments. Contact us with your design and quantity for a quotation.";
-
-        }
-
-
-        else if (
-            text.includes("mug")
-        ) {
-
-            reply =
-                "We provide customised branded mugs for businesses, gifts, events and promotional campaigns.";
-
-        }
-
-
-        else if (
-            text.includes("diary") ||
-            text.includes("notebook")
-        ) {
-
-            reply =
-                "We provide branded diaries and notebooks suitable for corporate gifts, organisations and promotional campaigns.";
-
-        }
-
-
-        else if (
-            text.includes("banner")
-        ) {
-
-            reply =
-                "We produce PVC banners, roll-up banners, X-frame banners, teardrop banners and other large-format displays.";
-
-        }
-
-
-        else if (
-            text.includes("gazebo")
-        ) {
-
-            reply =
-                "We provide branded promotional gazebos suitable for events, exhibitions, outdoor marketing and corporate activations.";
-
-        }
-
-
-        else if (
-            text.includes("canvas")
-        ) {
-
-            reply =
-                "We provide canvas printing for artwork, portraits, décor and display purposes.";
-
-        }
-
-
-        else if (
-            text.includes("business card")
-        ) {
-
-            reply =
-                "We design and print professional business cards for companies, professionals and organisations.";
-
-        }
-
-
-        else if (
-            text.includes("company profile")
-        ) {
-
-            reply =
-                "We design and print professional company profiles to help businesses present their services and corporate identity.";
-
-        }
-
-
-        else if (
-            text.includes("wedding")
-        ) {
-
-            reply =
-                "We design and print customised wedding invitations and related stationery.";
-
-        }
-
-
-        else if (
-            text.includes("printing") ||
-            text.includes("print")
-        ) {
-
-            reply =
-                "Our printing services include business cards, company profiles, wedding cards, flyers, brochures, bond papers and specialty papers.";
-
-        }
-
-
-        else if (
-            text.includes("branding")
-        ) {
-
-            reply =
-                "Our specialist branding branch offers DTF printing, T-shirts, hoodies, caps, mugs, diaries, notebooks, promotional products and large-format branding.";
-
-        }
-
-
-        else if (
-            text.includes("location") ||
-            text.includes("where") ||
-            text.includes("address")
-        ) {
-
-            reply =
-                "We are located at Shop 7, Manica Chambers, Main Street, Mutare, Zimbabwe.";
-
-        }
-
-
-        else if (
-            text.includes("phone") ||
-            text.includes("contact") ||
-            text.includes("number")
-        ) {
-
-            reply =
-                "You can contact Solatech on 0775 799 634, 0783 527 449, 0714 367 000 or 0714 367 002.";
-
-        }
-
-
-        else if (
-            text.includes("hello") ||
-            text.includes("hi") ||
-            text.includes("hey")
-        ) {
-
-            reply =
-                "Hello! 👋 Welcome to Solatech Computers. How can we help you today?";
-
-        }
-
-
-        botMessage.textContent =
-            reply;
-
-
-        chatBody.appendChild(botMessage);
-
-
-        chatBody.scrollTop =
-            chatBody.scrollHeight;
-
-
-    }, 600);
+chatMessages.scrollTop =
+chatMessages.scrollHeight;
 
 }
 
 
-sendMessage.addEventListener(
-    "click",
-    sendChatMessage
+function chatbotReply(message){
+
+const text =
+message.toLowerCase();
+
+let reply =
+"Thanks for contacting Solatech Computers. Please call 0775 799 634 or WhatsApp us for detailed assistance.";
+
+if(
+text.includes("computer") ||
+text.includes("laptop")
+){
+
+reply =
+"We sell computers, laptops, monitors, accessories and other technology products. You can also contact us for computer repairs and upgrades.";
+
+}
+
+else if(
+text.includes("repair") ||
+text.includes("fix")
+){
+
+reply =
+"Our computer repair services include diagnostics, software installation, hardware repairs, upgrades and troubleshooting.";
+
+}
+
+else if(
+text.includes("network")
+){
+
+reply =
+"We provide networking solutions including Wi-Fi, routers, switches, structured cabling and network troubleshooting.";
+
+}
+
+else if(
+text.includes("cctv") ||
+text.includes("camera")
+){
+
+reply =
+"We supply and install CCTV security systems for homes, offices, shops and businesses.";
+
+}
+
+else if(
+text.includes("shirt") ||
+text.includes("dtf") ||
+text.includes("branding")
+){
+
+reply =
+"Our branding division provides DTF T-shirt printing, branded diaries, mugs, caps and promotional merchandise.";
+
+}
+
+else if(
+text.includes("banner") ||
+text.includes("gazebo") ||
+text.includes("canvas") ||
+text.includes("large")
+){
+
+reply =
+"We provide large format printing including banners, canvas, gazebos, teardrops, roll-up banners and X-frame banners.";
+
+}
+
+else if(
+text.includes("location") ||
+text.includes("where")
+){
+
+reply =
+"We are located at Shop 7, Manica Chambers, Main Street, Mutare, Zimbabwe.";
+
+}
+
+else if(
+text.includes("contact") ||
+text.includes("phone") ||
+text.includes("number")
+){
+
+reply =
+"You can contact Solatech on 0775 799 634, 0783 527 449, 0714 367 000 or 0714 367 002.";
+
+}
+
+setTimeout(()=>{
+
+addMessage(reply,"bot");
+
+},500);
+
+}
+
+
+function sendChat(){
+
+const value =
+chatInput.value.trim();
+
+if(!value)return;
+
+addMessage(value,"user");
+
+chatInput.value="";
+
+chatbotReply(value);
+
+}
+
+
+chatSend.addEventListener(
+"click",
+sendChat
 );
 
 
 chatInput.addEventListener(
-    "keypress",
-    function (event) {
+"keypress",
+function(e){
 
-        if (event.key === "Enter") {
+if(e.key==="Enter"){
 
-            sendChatMessage();
+sendChat();
 
-        }
+}
 
-    }
-);
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backTop =
-    document.getElementById("backTop");
+});
 
 
-window.addEventListener(
-    "scroll",
-    function () {
+/* WHATSAPP CONTACT FORM */
 
-        if (window.scrollY > 500) {
+function sendWhatsApp(event){
 
-            backTop.classList.add("show");
+event.preventDefault();
 
-        } else {
+const name =
+document.getElementById("name").value;
 
-            backTop.classList.remove("show");
+const phone =
+document.getElementById("phone").value;
 
-        }
+const service =
+document.getElementById("service").value;
 
-    }
-);
-
-
-backTop.addEventListener(
-    "click",
-    function () {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    }
-);
+const message =
+document.getElementById("message").value;
 
 
-/* =========================================================
-   CLOSE MOBILE NAVIGATION
-========================================================= */
+const text =
+`Hello Solatech Computers.
 
-document
-    .querySelectorAll(".navbar .nav-link")
-    .forEach(function (link) {
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
 
-        link.addEventListener(
-            "click",
-            function () {
-
-                const menu =
-                    document.getElementById("mainNav");
+Message:
+${message}`;
 
 
-                if (
-                    menu.classList.contains("show")
-                ) {
-
-                    const collapse =
-                        bootstrap.Collapse
-                        .getInstance(menu);
+const url =
+"https://wa.me/263775799634?text="
++encodeURIComponent(text);
 
 
-                    if (collapse) {
+window.open(url,"_blank");
 
-                        collapse.hide();
-
-                    }
-
-                }
-
-            }
-        );
-
-    });
+}
 
 
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
+/* SIMPLE SCROLL REVEAL */
 
-const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
+const observer =
+new IntersectionObserver(
+(entries)=>{
 
+entries.forEach(entry=>{
 
-const navLinks =
-    document.querySelectorAll(
-        ".nav-link"
-    );
+if(entry.isIntersecting){
 
+entry.target.style.opacity="1";
 
-window.addEventListener(
-    "scroll",
-    function () {
+entry.target.style.transform="translateY(0)";
 
-        let current = "";
+}
 
+});
 
-        sections.forEach(function (section) {
-
-            const sectionTop =
-                section.offsetTop - 150;
+},
+{
+threshold:.12
+});
 
 
-            if (
-                window.scrollY >= sectionTop
-            ) {
+document.querySelectorAll(
+".service-card,.product-card,.process-card,.stat,.about-image,.branding-gallery img"
+)
+.forEach(el=>{
 
-                current =
-                    section.getAttribute("id");
+el.style.opacity="0";
 
-            }
+el.style.transform="translateY(25px)";
 
-        });
+el.style.transition=
+"opacity .7s ease, transform .7s ease";
 
+observer.observe(el);
 
-        navLinks.forEach(function (link) {
+});
 
-            link.classList.remove("active");
-
-
-            const href =
-                link.getAttribute("href");
-
-
-            if (
-                href === "#" + current
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    }
-);
 
 </script>
 
