@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Solatech Computers Pvt Ltd | IT, Printing & Branding Solutions</title>
+<title>Solatech Computers Pvt Ltd | Technology, Printing & Branding</title>
 
-<meta name="description"
-content="Solatech Computers Pvt Ltd - Computer sales, repairs, networking, CCTV, printing, graphic design, branding and large format printing in Mutare, Zimbabwe.">
+<meta name="description" content="Solatech Computers Pvt Ltd - Computer sales, repairs, networking, CCTV, printing, graphic design, branding and large format printing in Mutare, Zimbabwe.">
 
 <link rel="icon" type="image/png" href="images/logo.png">
 
@@ -24,7 +23,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 /* =========================================================
    SOLATECH COMPUTERS
-   BukPod-inspired modern print/technology website
    ========================================================= */
 
 :root{
@@ -84,6 +82,11 @@ section{
     padding:100px 0;
 }
 
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
 .section-tag{
     display:inline-flex;
     align-items:center;
@@ -115,6 +118,15 @@ section{
     max-width:650px;
     font-size:17px;
     line-height:1.8;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-heading .section-description{
+    margin:auto;
 }
 
 
@@ -156,7 +168,7 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.97);
     backdrop-filter:blur(15px);
     border-bottom:1px solid rgba(0,0,0,.06);
 }
@@ -179,9 +191,15 @@ header{
 }
 
 .logo img{
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
     object-fit:contain;
+}
+
+.logo small{
+    font-size:12px;
+    color:var(--blue);
+    letter-spacing:1px;
 }
 
 .nav-links{
@@ -221,11 +239,14 @@ header{
 
 .hero{
     min-height:calc(100vh - 120px);
+
     background:
-        linear-gradient(100deg,
-        rgba(3,44,34,.94),
-        rgba(4,74,65,.76),
-        rgba(4,91,145,.58)),
+        linear-gradient(
+            100deg,
+            rgba(3,44,34,.95),
+            rgba(4,74,65,.80),
+            rgba(4,91,145,.65)
+        ),
         url("images/hero-printing.jpg") center/cover;
 
     position:relative;
@@ -260,6 +281,7 @@ header{
     position:relative;
     z-index:2;
     min-height:calc(100vh - 120px);
+
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
@@ -315,6 +337,7 @@ header{
     font-weight:700;
     transition:.3s;
     border:2px solid transparent;
+    cursor:pointer;
 }
 
 .btn-primary{
@@ -487,15 +510,6 @@ header{
     background:var(--light);
 }
 
-.section-heading{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-heading .section-description{
-    margin:auto;
-}
-
 .service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -572,7 +586,7 @@ header{
 
 
 /* =========================================================
-   BRANDING SHOWCASE
+   BRANDING
    ========================================================= */
 
 .branding{
@@ -680,8 +694,13 @@ header{
 
 .large-format{
     background:
-        linear-gradient(100deg,rgba(3,62,47,.95),rgba(3,86,140,.88)),
+        linear-gradient(
+            100deg,
+            rgba(3,62,47,.95),
+            rgba(3,86,140,.88)
+        ),
         url("images/large-format.jpg") center/cover;
+
     color:#fff;
 }
 
@@ -719,7 +738,7 @@ header{
 
 
 /* =========================================================
-   COUNTERS
+   STATS
    ========================================================= */
 
 .stats{
@@ -769,6 +788,12 @@ header{
     border:1px solid var(--border);
     border-radius:18px;
     position:relative;
+    transition:.4s;
+}
+
+.process-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
 }
 
 .process-number{
@@ -930,7 +955,9 @@ footer{
 }
 
 .footer-logo img{
-    width:50px;
+    width:65px;
+    height:65px;
+    object-fit:contain;
 }
 
 .footer-col p{
@@ -979,6 +1006,11 @@ footer{
     font-size:13px;
 }
 
+.developer{
+    color:#72ddb5;
+    font-weight:700;
+}
+
 
 /* =========================================================
    CHATBOT
@@ -998,6 +1030,10 @@ footer{
     cursor:pointer;
     box-shadow:0 12px 30px rgba(0,0,0,.2);
     z-index:2000;
+}
+
+.chat-button:hover{
+    transform:scale(1.08);
 }
 
 .chat-box{
@@ -1121,6 +1157,7 @@ footer{
         opacity:0;
         transform:translateY(30px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -1131,6 +1168,7 @@ footer{
     0%,100%{
         transform:translateY(0);
     }
+
     50%{
         transform:translateY(-15px);
     }
@@ -1140,6 +1178,7 @@ footer{
     from{
         transform:rotate(0);
     }
+
     to{
         transform:rotate(360deg);
     }
@@ -1150,6 +1189,7 @@ footer{
         opacity:0;
         transform:translateY(20px) scale(.95);
     }
+
     to{
         opacity:1;
         transform:translateY(0) scale(1);
@@ -1204,6 +1244,7 @@ footer{
     }
 }
 
+
 @media(max-width:750px){
 
     .topbar{
@@ -1211,14 +1252,18 @@ footer{
     }
 
     .navbar{
-        height:72px;
+        height:78px;
     }
-   
+
+    .logo img{
+        width:65px;
+        height:65px;
+    }
 
     .nav-links{
         display:none;
         position:absolute;
-        top:72px;
+        top:78px;
         left:0;
         width:100%;
         background:#fff;
@@ -1275,6 +1320,7 @@ footer{
     .footer-bottom{
         flex-direction:column;
         gap:10px;
+        text-align:center;
     }
 
     .chat-box{
@@ -1291,10 +1337,12 @@ footer{
         left:15px;
         bottom:15px;
     }
+
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -1304,19 +1352,38 @@ footer{
 ===================================================== -->
 
 <div class="topbar">
+
 <div class="container topbar-content">
 
 <div class="topbar-left">
-<span><i class="fa-solid fa-phone"></i> 0775 799 634</span>
-<span><i class="fa-solid fa-envelope"></i> info@solatech.co.zw</span>
+
+<span>
+<i class="fa-solid fa-phone"></i>
+0775 799 634
+</span>
+
+<span>
+<i class="fa-solid fa-envelope"></i>
+info@solatech.co.zw
+</span>
+
 </div>
 
 <div class="topbar-right">
-<span>Mutare, Zimbabwe</span>
-<span>Mon - Sat: 8:00 - 17:00</span>
+
+<span>
+<i class="fa-solid fa-location-dot"></i>
+Mutare, Zimbabwe
+</span>
+
+<span>
+Mon - Sat: 8:00 - 17:00
+</span>
+
 </div>
 
 </div>
+
 </div>
 
 
@@ -1328,32 +1395,67 @@ footer{
 
 <div class="container navbar">
 
+
 <a href="#home" class="logo">
 
-<img src="images/logo.png" alt="Solatech Computers Logo">
+<!-- ORIGINAL LOGO COLOURS ARE PRESERVED -->
+<img src="images/logo.png"
+alt="Solatech Computers Logo">
 
-<!--span>Solatech<br><small>Computers</small></span>-->
+<div>
+Solatech
+<br>
+<small>COMPUTERS</small>
+</div>
 
 </a>
 
 
-<button class="menu-btn" id="menuBtn">
+<button class="menu-btn"
+id="menuBtn"
+aria-label="Open Menu">
+
 <i class="fa-solid fa-bars"></i>
+
 </button>
 
 
-<nav class="nav-links" id="navLinks">
+<nav class="nav-links"
+id="navLinks">
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#branding">Branding</a>
-<a href="#products">Products</a>
-<a href="#process">Our Process</a>
-<a href="#contact">Contact</a>
+<a href="#home">
+Home
+</a>
 
-<a href="#contact" class="nav-btn">
+<a href="#about">
+About
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#branding">
+Branding
+</a>
+
+<a href="#products">
+Products
+</a>
+
+<a href="#process">
+Our Process
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a href="#contact"
+class="nav-btn">
+
 Get A Quote
+
 </a>
 
 </nav>
@@ -1371,39 +1473,59 @@ Get A Quote
 
 <div class="container hero-content">
 
+
 <div class="hero-text">
 
 <div class="hero-badge">
+
 <i class="fa-solid fa-circle-check"></i>
+
 Trusted Technology & Branding Partner
+
 </div>
 
 
 <h1>
+
 Technology.
+
 <br>
+
 Printing.
+
 <br>
+
 <span>Branding.</span>
+
 </h1>
 
 
 <p>
+
 Solatech Computers Pvt Ltd provides complete technology,
 printing and branding solutions for individuals, businesses,
 organisations and institutions across Mutare and Zimbabwe.
+
 </p>
 
 
 <div class="hero-buttons">
 
-<a href="#services" class="btn btn-primary">
+<a href="#services"
+class="btn btn-primary">
+
 Explore Our Services
+
 <i class="fa-solid fa-arrow-right"></i>
+
 </a>
 
-<a href="#contact" class="btn btn-outline">
+
+<a href="#contact"
+class="btn btn-outline">
+
 Talk To Us
+
 </a>
 
 </div>
@@ -1420,6 +1542,7 @@ alt="Solatech Printing and Technology Services">
 
 </div>
 
+
 <div class="floating-card">
 
 <strong>3</strong>
@@ -1429,6 +1552,7 @@ Branches in Mutare
 </div>
 
 </div>
+
 
 </div>
 
@@ -1443,16 +1567,27 @@ Branches in Mutare
 
 <div class="container trust-grid">
 
+
 <div class="trust-item">
 
 <div class="trust-icon">
+
 <i class="fa-solid fa-laptop"></i>
+
 </div>
 
 <div>
-<strong>IT Solutions</strong>
+
+<strong>
+IT Solutions
+</strong>
+
 <br>
-<small>Sales & Support</small>
+
+<small>
+Sales & Support
+</small>
+
 </div>
 
 </div>
@@ -1461,13 +1596,23 @@ Branches in Mutare
 <div class="trust-item">
 
 <div class="trust-icon">
+
 <i class="fa-solid fa-network-wired"></i>
+
 </div>
 
 <div>
-<strong>Networking</strong>
+
+<strong>
+Networking
+</strong>
+
 <br>
-<small>Business & Home</small>
+
+<small>
+Business & Home
+</small>
+
 </div>
 
 </div>
@@ -1476,13 +1621,23 @@ Branches in Mutare
 <div class="trust-item">
 
 <div class="trust-icon">
+
 <i class="fa-solid fa-print"></i>
+
 </div>
 
 <div>
-<strong>Printing</strong>
+
+<strong>
+Printing
+</strong>
+
 <br>
-<small>Digital & Large Format</small>
+
+<small>
+Digital & Large Format
+</small>
+
 </div>
 
 </div>
@@ -1491,16 +1646,27 @@ Branches in Mutare
 <div class="trust-item">
 
 <div class="trust-icon">
+
 <i class="fa-solid fa-shirt"></i>
+
 </div>
 
 <div>
-<strong>Branding</strong>
+
+<strong>
+Branding
+</strong>
+
 <br>
-<small>DTF & Merchandise</small>
+
+<small>
+DTF & Merchandise
+</small>
+
 </div>
 
 </div>
+
 
 </div>
 
@@ -1535,30 +1701,50 @@ Branches serving Mutare
 <div>
 
 <span class="section-tag">
+
 About Solatech
+
 </span>
 
+
 <h2 class="section-title">
-Your Complete <span>Technology & Branding</span> Partner
+
+Your Complete
+
+<span>
+Technology & Branding
+</span>
+
+Partner
+
 </h2>
+
 
 <p class="section-description">
 
-Solatech Computers Private Limited is a Zimbabwean technology,
-printing and branding company located at Shop 7, Manica Chambers,
-Main Street, Mutare.
-
-We provide practical and reliable technology solutions to
-individuals, businesses, organisations and institutions.
+Solatech Computers Private Limited is a Zimbabwean
+technology, printing and branding company located at
+Shop 7, Manica Chambers, Main Street, Mutare.
 
 </p>
 
 
-<p class="section-description" style="margin-top:15px;">
+<p class="section-description"
+style="margin-top:15px;">
 
-With three branches in Mutare, our operations cover computer
-sales and repairs, networking, CCTV solutions, technology sales,
-digital printing, graphic design, branding and large-format
+We provide practical and reliable technology solutions
+to individuals, businesses, organisations and institutions.
+
+</p>
+
+
+<p class="section-description"
+style="margin-top:15px;">
+
+Solatech operates three branches in Mutare. Two branches
+focus on computer repairs, networking, technology sales,
+computers, printers, CCTV systems and general printing.
+Our third branch specialises in branding and large-format
 printing.
 
 </p>
@@ -1566,45 +1752,78 @@ printing.
 
 <div class="about-list">
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Computer Sales
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Computer Repairs
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Networking
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 CCTV Systems
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Digital Printing
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Graphic Design
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 DTF Branding
+
 </div>
 
+
 <div>
+
 <i class="fa-solid fa-check"></i>
+
 Large Format Printing
+
 </div>
+
 
 </div>
 
@@ -1619,23 +1838,37 @@ Large Format Printing
      SERVICES
 ===================================================== -->
 
-<section class="services" id="services">
+<section class="services"
+id="services">
 
 <div class="container">
+
 
 <div class="section-heading">
 
 <span class="section-tag">
+
 What We Do
+
 </span>
 
+
 <h2 class="section-title">
-Complete <span>Technology Solutions</span>
+
+Complete
+
+<span>
+Technology Solutions
+</span>
+
 </h2>
 
+
 <p class="section-description">
+
 From computers and networking to printing and security,
 Solatech provides dependable solutions under one roof.
+
 </p>
 
 </div>
@@ -1644,124 +1877,191 @@ Solatech provides dependable solutions under one roof.
 <div class="service-grid">
 
 
+<!-- CARD 1 -->
+
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-computer"></i>
+
 </div>
 
-<h3>Computer Sales</h3>
+<h3>
+Computer Sales
+</h3>
 
 <p>
-Desktops, laptops, monitors, accessories, storage devices,
-printers and other technology products.
+
+Desktops, laptops, monitors, accessories, storage
+devices, printers and other technology products.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
 
 
+<!-- CARD 2 -->
+
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-screwdriver-wrench"></i>
+
 </div>
 
-<h3>Computer Repairs</h3>
+<h3>
+Computer Repairs
+</h3>
 
 <p>
-Hardware diagnostics, software installation, operating system
-support, upgrades, troubleshooting and maintenance.
+
+Hardware diagnostics, software installation, operating
+system support, upgrades, troubleshooting and maintenance.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
 
 
+<!-- CARD 3 -->
+
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-network-wired"></i>
+
 </div>
 
-<h3>Networking</h3>
+<h3>
+Networking
+</h3>
 
 <p>
-Network installation, Wi-Fi systems, structured cabling,
-routers, switches, configuration and troubleshooting.
+
+Network installation, Wi-Fi systems, routers, switches,
+structured cabling, configuration and troubleshooting.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
 
 
+<!-- CARD 4 -->
+
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-camera"></i>
+
 </div>
 
-<h3>CCTV & Security</h3>
+<h3>
+CCTV & Security
+</h3>
 
 <p>
-CCTV cameras, installation, configuration, monitoring and
-security solutions for homes and businesses.
+
+CCTV cameras, installation, configuration, monitoring
+and security solutions for homes and businesses.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
 
 
+<!-- CARD 5 -->
+
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-file-lines"></i>
+
 </div>
 
-<h3>Digital Printing</h3>
+<h3>
+Printing Services
+</h3>
 
 <p>
+
 Bond paper printing, certificates, business documents,
 company profiles, flyers, business cards and wedding cards.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
 
+
+<!-- CARD 6 -->
 
 <div class="service-card">
 
 <div class="service-icon">
+
 <i class="fa-solid fa-pen-ruler"></i>
+
 </div>
 
-<h3>Graphic Design</h3>
+<h3>
+Graphic Design
+</h3>
 
 <p>
+
 Professional company profiles, logos, posters, flyers,
 business cards, wedding stationery and marketing materials.
+
 </p>
 
-<a href="#contact" class="service-link">
+<a href="#contact"
+class="service-link">
+
 Learn More →
+
 </a>
 
 </div>
+
 
 </div>
 
@@ -1774,33 +2074,54 @@ Learn More →
      BRANDING
 ===================================================== -->
 
-<section id="branding" class="branding">
+<section id="branding"
+class="branding">
 
 <div class="container branding-grid">
 
 
 <div class="branding-gallery">
 
-<img src="images/tshirt.jpg" alt="DTF T-shirt Branding">
 
-<img src="images/diary.jpg" alt="Branded Diaries">
+<img src="images/tshirt.jpg"
+alt="DTF T-shirt Branding">
 
-<img src="images/mug.jpg" alt="Branded Mug">
 
-<img src="images/cap.jpg" alt="Branded Cap">
+<img src="images/diary.jpg"
+alt="Branded Diaries">
+
+
+<img src="images/mug.jpg"
+alt="Branded Mug">
+
+
+<img src="images/cap.jpg"
+alt="Branded Cap">
+
 
 </div>
 
 
 <div class="branding-content">
 
+
 <span class="section-tag">
+
 Branding Division
+
 </span>
 
+
 <h2 class="section-title">
-Turn Your <span>Brand Into Reality</span>
+
+Turn Your Brand
+
+<span>
+Into Reality
+</span>
+
 </h2>
+
 
 <p class="section-description">
 
@@ -1813,40 +2134,84 @@ organisations, events, schools and individuals.
 
 <ul>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 DTF T-shirt printing
+
 </li>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 Branded diaries and notebooks
+
 </li>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 Custom mugs and drinkware
+
 </li>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 Caps and promotional clothing
+
 </li>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 Corporate promotional merchandise
+
 </li>
 
+
 <li>
+
 <i class="fa-solid fa-check-circle"></i>
+
 Custom event and campaign branding
+
 </li>
+
+
+<li>
+
+<i class="fa-solid fa-check-circle"></i>
+
+Branded gazebos and teardrops
+
+</li>
+
+
+<li>
+
+<i class="fa-solid fa-check-circle"></i>
+
+Roll-up and X-frame banners
+
+</li>
+
 
 </ul>
 
 
-<a href="#contact" class="btn"
+<a href="#contact"
+class="btn"
 style="background:var(--green);color:#fff;margin-top:20px;">
 
 Request Branding Quote
@@ -1854,6 +2219,7 @@ Request Branding Quote
 <i class="fa-solid fa-arrow-right"></i>
 
 </a>
+
 
 </div>
 
@@ -1866,24 +2232,38 @@ Request Branding Quote
      PRODUCTS
 ===================================================== -->
 
-<section class="products" id="products">
+<section class="products"
+id="products">
 
 <div class="container">
+
 
 <div class="section-heading">
 
 <span class="section-tag"
 style="background:rgba(255,255,255,.1);color:#fff;">
+
 Our Products
+
 </span>
 
+
 <h2 class="section-title">
-Everything Your <span>Business Needs</span>
+
+Everything Your
+
+<span>
+Business Needs
+</span>
+
 </h2>
 
+
 <p class="section-description">
-Technology products, printing products and branded merchandise
-available through Solatech Computers.
+
+Technology products, printing products and branded
+merchandise available through Solatech Computers.
+
 </p>
 
 </div>
@@ -1894,11 +2274,14 @@ available through Solatech Computers.
 
 <div class="product-card">
 
-<img src="images/computer.jpg" alt="Computers">
+<img src="images/computer.jpg"
+alt="Computers">
 
 <div class="product-card-body">
 
-<h3>Computers</h3>
+<h3>
+Computers
+</h3>
 
 <p>
 Laptops, desktops, monitors and accessories.
@@ -1911,11 +2294,14 @@ Laptops, desktops, monitors and accessories.
 
 <div class="product-card">
 
-<img src="images/printer.jpg" alt="Printers">
+<img src="images/printer.jpg"
+alt="Printers">
 
 <div class="product-card-body">
 
-<h3>Printers</h3>
+<h3>
+Printers
+</h3>
 
 <p>
 Printers, cartridges, toners and printing accessories.
@@ -1928,11 +2314,14 @@ Printers, cartridges, toners and printing accessories.
 
 <div class="product-card">
 
-<img src="images/cctv.jpg" alt="CCTV">
+<img src="images/cctv.jpg"
+alt="CCTV">
 
 <div class="product-card-body">
 
-<h3>CCTV Systems</h3>
+<h3>
+CCTV Systems
+</h3>
 
 <p>
 Security cameras and surveillance equipment.
@@ -1945,11 +2334,14 @@ Security cameras and surveillance equipment.
 
 <div class="product-card">
 
-<img src="images/tshirt.jpg" alt="T-shirt Printing">
+<img src="images/tshirt.jpg"
+alt="T-shirt Printing">
 
 <div class="product-card-body">
 
-<h3>Branded T-Shirts</h3>
+<h3>
+Branded T-Shirts
+</h3>
 
 <p>
 Custom DTF printed clothing for individuals and businesses.
@@ -1978,14 +2370,25 @@ Custom DTF printed clothing for individuals and businesses.
 
 <div>
 
+
 <span class="section-tag"
 style="background:rgba(255,255,255,.1);color:#fff;">
+
 Large Format Printing
+
 </span>
 
+
 <h2 class="section-title">
-Make Your Brand <span>Impossible To Ignore</span>
+
+Make Your Brand
+
+<span>
+Impossible To Ignore
+</span>
+
 </h2>
+
 
 <p class="section-description">
 
@@ -1998,45 +2401,66 @@ materials for indoor and outdoor marketing.
 
 <div class="format-list">
 
+
 <div>
 <i class="fa-solid fa-flag"></i>
 Banners
 </div>
+
 
 <div>
 <i class="fa-solid fa-image"></i>
 Canvas Printing
 </div>
 
+
 <div>
 <i class="fa-solid fa-tent"></i>
 Gazebos
 </div>
+
 
 <div>
 <i class="fa-solid fa-arrow-up"></i>
 Teardrops
 </div>
 
+
 <div>
 <i class="fa-solid fa-rectangle-ad"></i>
 Roll-Up Banners
 </div>
+
 
 <div>
 <i class="fa-solid fa-border-all"></i>
 X-Frame Banners
 </div>
 
+
 <div>
 <i class="fa-solid fa-store"></i>
 Shop Branding
 </div>
 
+
 <div>
 <i class="fa-solid fa-bullhorn"></i>
 Event Branding
 </div>
+
+
+<div>
+<i class="fa-solid fa-shirt"></i>
+T-Shirt Branding
+</div>
+
+
+<div>
+<i class="fa-solid fa-mug-hot"></i>
+Mug Branding
+</div>
+
 
 </div>
 
@@ -2049,6 +2473,7 @@ Event Branding
 alt="Large Format Printing">
 
 </div>
+
 
 </div>
 
@@ -2063,40 +2488,58 @@ alt="Large Format Printing">
 
 <div class="container stats-grid">
 
+
 <div class="stat">
 
-<strong>3</strong>
+<strong>
+3
+</strong>
 
-<span>Branches in Mutare</span>
+<span>
+Branches in Mutare
+</span>
 
 </div>
 
 
 <div class="stat">
 
-<strong>10+</strong>
+<strong>
+10+
+</strong>
 
-<span>Technology Services</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>100%</strong>
-
-<span>Customer Focus</span>
+<span>
+Technology Services
+</span>
 
 </div>
 
 
 <div class="stat">
 
-<strong>1</strong>
+<strong>
+100%
+</strong>
 
-<span>Complete Solution</span>
+<span>
+Customer Focus
+</span>
 
 </div>
+
+
+<div class="stat">
+
+<strong>
+1
+</strong>
+
+<span>
+Complete Solution
+</span>
+
+</div>
+
 
 </div>
 
@@ -2111,19 +2554,32 @@ alt="Large Format Printing">
 
 <div class="container">
 
+
 <div class="section-heading">
 
 <span class="section-tag">
+
 How We Work
+
 </span>
 
+
 <h2 class="section-title">
-Simple. Fast. <span>Professional.</span>
+
+Simple. Fast.
+
+<span>
+Professional.
+</span>
+
 </h2>
 
+
 <p class="section-description">
-We make it easy to move from an idea to a finished technology,
-printing or branding solution.
+
+We make it easy to move from an idea to a finished
+technology, printing or branding solution.
+
 </p>
 
 </div>
@@ -2134,13 +2590,19 @@ printing or branding solution.
 
 <div class="process-card">
 
-<div class="process-number">01</div>
+<div class="process-number">
+01
+</div>
 
-<h3>Consultation</h3>
+<h3>
+Consultation
+</h3>
 
 <p>
-Tell us what you need and our team will help determine the
-best solution.
+
+Tell us what you need and our team will help determine
+the best solution.
+
 </p>
 
 </div>
@@ -2148,13 +2610,19 @@ best solution.
 
 <div class="process-card">
 
-<div class="process-number">02</div>
+<div class="process-number">
+02
+</div>
 
-<h3>Design & Planning</h3>
+<h3>
+Design & Planning
+</h3>
 
 <p>
+
 We prepare designs, specifications and recommendations
 according to your requirements.
+
 </p>
 
 </div>
@@ -2162,13 +2630,19 @@ according to your requirements.
 
 <div class="process-card">
 
-<div class="process-number">03</div>
+<div class="process-number">
+03
+</div>
 
-<h3>Production</h3>
+<h3>
+Production
+</h3>
 
 <p>
+
 Our team handles printing, installation, configuration,
 repairs or branding.
+
 </p>
 
 </div>
@@ -2176,15 +2650,22 @@ repairs or branding.
 
 <div class="process-card">
 
-<div class="process-number">04</div>
+<div class="process-number">
+04
+</div>
 
-<h3>Delivery</h3>
+<h3>
+Delivery
+</h3>
 
 <p>
+
 We complete your project and provide support where required.
+
 </p>
 
 </div>
+
 
 </div>
 
@@ -2197,23 +2678,37 @@ We complete your project and provide support where required.
      CONTACT
 ===================================================== -->
 
-<section class="contact" id="contact">
+<section class="contact"
+id="contact">
 
 <div class="container">
+
 
 <div class="section-heading">
 
 <span class="section-tag">
+
 Contact Us
+
 </span>
 
+
 <h2 class="section-title">
-Let's Build Something <span>Great</span>
+
+Let's Build Something
+
+<span>
+Great
+</span>
+
 </h2>
 
+
 <p class="section-description">
+
 Have a technology, printing or branding project?
 Speak to Solatech Computers today.
+
 </p>
 
 </div>
@@ -2224,11 +2719,17 @@ Speak to Solatech Computers today.
 
 <div class="contact-info">
 
-<h3>Get In Touch</h3>
+
+<h3>
+Get In Touch
+</h3>
+
 
 <p>
-Visit our Mutare branch or contact our team using the
-details below.
+
+Visit our Mutare branch or contact our team using
+the details below.
+
 </p>
 
 
@@ -2237,10 +2738,21 @@ details below.
 <i class="fa-solid fa-location-dot"></i>
 
 <span>
-<strong>Address</strong><br>
-Shop 7, Manica Chambers<br>
-Main Street, Mutare<br>
+
+<strong>
+Address
+</strong>
+
+<br>
+
+Shop 7, Manica Chambers
+<br>
+
+Main Street, Mutare
+<br>
+
 Zimbabwe
+
 </span>
 
 </div>
@@ -2251,11 +2763,24 @@ Zimbabwe
 <i class="fa-solid fa-phone"></i>
 
 <span>
-<strong>Phone</strong><br>
-0775 799 634<br>
-0783 527 449<br>
-0714 367 000<br>
+
+<strong>
+Phone
+</strong>
+
+<br>
+
+0775 799 634
+<br>
+
+0783 527 449
+<br>
+
+0714 367 000
+<br>
+
 0714 367 002
+
 </span>
 
 </div>
@@ -2266,8 +2791,15 @@ Zimbabwe
 <i class="fa-solid fa-building"></i>
 
 <span>
-<strong>Branches</strong><br>
+
+<strong>
+Branches
+</strong>
+
+<br>
+
 3 branches across Mutare
+
 </span>
 
 </div>
@@ -2278,30 +2810,43 @@ Zimbabwe
 <i class="fa-solid fa-clock"></i>
 
 <span>
-<strong>Business Hours</strong><br>
-Monday - Friday<br>
-7:30 AM - 5:30 PM<br>
-Saturday<br>
-   7:30 AM - 4:00 PM
+
+<strong>
+Business Hours
+</strong>
+
+<br>
+
+Monday - Saturday
+<br>
+
+8:00 AM - 5:00 PM
+
 </span>
 
 </div>
+
 
 </div>
 
 
 <div class="contact-form">
 
+
 <form onsubmit="sendWhatsApp(event)">
+
 
 <div class="form-grid">
 
 
 <div class="form-group">
 
-<label>Name</label>
+<label>
+Name
+</label>
 
-<input type="text"
+<input
+type="text"
 id="name"
 placeholder="Your name"
 required>
@@ -2311,9 +2856,12 @@ required>
 
 <div class="form-group">
 
-<label>Phone</label>
+<label>
+Phone
+</label>
 
-<input type="tel"
+<input
+type="tel"
 id="phone"
 placeholder="Your phone number"
 required>
@@ -2323,19 +2871,75 @@ required>
 
 <div class="form-group full">
 
-<label>Service Required</label>
+<label>
+Service Required
+</label>
 
 <select id="service">
 
-<option>Computer Sales</option>
-<option>Computer Repair</option>
-<option>Networking</option>
-<option>CCTV</option>
-<option>Printing</option>
-<option>Graphic Design</option>
-<option>DTF T-Shirt Branding</option>
-<option>Large Format Printing</option>
-<option>Other</option>
+<option>
+Computer Sales
+</option>
+
+<option>
+Computer Repair
+</option>
+
+<option>
+Networking
+</option>
+
+<option>
+CCTV
+</option>
+
+<option>
+Printing
+</option>
+
+<option>
+Graphic Design
+</option>
+
+<option>
+DTF T-Shirt Branding
+</option>
+
+<option>
+Branded Diaries
+</option>
+
+<option>
+Branded Mugs
+</option>
+
+<option>
+Large Format Printing
+</option>
+
+<option>
+Banners
+</option>
+
+<option>
+Gazebos
+</option>
+
+<option>
+Teardrops
+</option>
+
+<option>
+Roll-Up Banners
+</option>
+
+<option>
+X-Frame Banners
+</option>
+
+<option>
+Other
+</option>
 
 </select>
 
@@ -2344,9 +2948,12 @@ required>
 
 <div class="form-group full">
 
-<label>Message</label>
+<label>
+Message
+</label>
 
-<textarea id="message"
+<textarea
+id="message"
 placeholder="Tell us what you need..."></textarea>
 
 </div>
@@ -2354,8 +2961,9 @@ placeholder="Tell us what you need..."></textarea>
 
 <div class="form-group full">
 
-<button class="btn"
-style="background:var(--green);color:#fff;border:0;cursor:pointer;"
+<button
+class="btn"
+style="background:var(--green);color:#fff;border:0;"
 type="submit">
 
 Send Enquiry
@@ -2366,11 +2974,13 @@ Send Enquiry
 
 </div>
 
+
 </div>
 
 </form>
 
 </div>
+
 
 </div>
 
@@ -2404,19 +3014,24 @@ allowfullscreen>
 
 <div class="container">
 
+
 <div class="footer-grid">
 
 
 <div class="footer-col">
+
 
 <div class="footer-logo">
 
 <img src="images/logo.png"
 alt="Solatech Computers">
 
-<span>Solatech Computers</span>
+<span>
+Solatech Computers
+</span>
 
 </div>
+
 
 <p>
 
@@ -2428,20 +3043,35 @@ for businesses and individuals in Mutare and beyond.
 
 <div class="socials">
 
-<a href="#">
+<a href="#"
+aria-label="Facebook">
+
 <i class="fa-brands fa-facebook-f"></i>
+
 </a>
 
-<a href="#">
+
+<a href="#"
+aria-label="Instagram">
+
 <i class="fa-brands fa-instagram"></i>
+
 </a>
 
-<a href="#">
+
+<a href="#"
+aria-label="WhatsApp">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
-<a href="#">
+
+<a href="#"
+aria-label="TikTok">
+
 <i class="fa-brands fa-tiktok"></i>
+
 </a>
 
 </div>
@@ -2451,55 +3081,117 @@ for businesses and individuals in Mutare and beyond.
 
 <div class="footer-col">
 
-<h4>Company</h4>
+<h4>
+Company
+</h4>
 
-<a href="#about">About Us</a>
-<a href="#services">Services</a>
-<a href="#branding">Branding</a>
-<a href="#contact">Contact</a>
+<a href="#about">
+About Us
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#branding">
+Branding
+</a>
+
+<a href="#contact">
+Contact
+</a>
 
 </div>
 
 
 <div class="footer-col">
 
-<h4>Services</h4>
+<h4>
+Services
+</h4>
 
-<a href="#services">Computer Sales</a>
-<a href="#services">Computer Repairs</a>
-<a href="#services">Networking</a>
-<a href="#services">CCTV</a>
-<a href="#branding">DTF Branding</a>
+<a href="#services">
+Computer Sales
+</a>
+
+<a href="#services">
+Computer Repairs
+</a>
+
+<a href="#services">
+Networking
+</a>
+
+<a href="#services">
+CCTV
+</a>
+
+<a href="#branding">
+DTF Branding
+</a>
 
 </div>
 
 
 <div class="footer-col">
 
-<h4>Printing</h4>
+<h4>
+Printing
+</h4>
 
-<a href="#services">Digital Printing</a>
-<a href="#branding">T-Shirt Printing</a>
-<a href="#branding">Corporate Branding</a>
-<a href="#contact">Large Format</a>
-<a href="#contact">Graphic Design</a>
+<a href="#services">
+Digital Printing
+</a>
+
+<a href="#branding">
+T-Shirt Printing
+</a>
+
+<a href="#branding">
+Corporate Branding
+</a>
+
+<a href="#contact">
+Large Format
+</a>
+
+<a href="#contact">
+Graphic Design
+</a>
 
 </div>
+
 
 </div>
 
 
 <div class="footer-bottom">
 
-<span>
-© 2026 Solatech Computers Pvt Ltd. All Rights Reserved.
-</span>
 
 <span>
-Website developed by <strong>Pulserbyte</strong>
+
+© 2026 Solatech Computers Pvt Ltd.
+All Rights Reserved.
+
 </span>
+
+
+<span>
+
+Done by
+<strong class="developer">
+Pulserbyte
+</strong>
+
+&nbsp; | &nbsp;
+
+0716440832
+
+</span>
+
 
 </div>
+
 
 </div>
 
@@ -2510,7 +3202,8 @@ Website developed by <strong>Pulserbyte</strong>
      WHATSAPP BUTTON
 ===================================================== -->
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/263775799634?text=Hello%20Solatech%20Computers%2C%20I%20would%20like%20to%20make%20an%20enquiry."
 target="_blank"
 aria-label="WhatsApp">
@@ -2521,10 +3214,11 @@ aria-label="WhatsApp">
 
 
 <!-- =====================================================
-     CHATBOT
+     CHATBOT BUTTON
 ===================================================== -->
 
-<button class="chat-button"
+<button
+class="chat-button"
 id="chatButton"
 aria-label="Open Chatbot">
 
@@ -2533,30 +3227,54 @@ aria-label="Open Chatbot">
 </button>
 
 
-<div class="chat-box" id="chatBox">
+<!-- =====================================================
+     CHATBOT
+===================================================== -->
+
+<div class="chat-box"
+id="chatBox">
+
 
 <div class="chat-header">
 
+
 <div>
 
-<strong>Solatech Assistant</strong>
+<strong>
+Solatech Assistant
+</strong>
 
-<small>How can we help?</small>
+<small>
+How can we help?
+</small>
 
 </div>
 
-<button class="chat-close" id="chatClose">
+
+<button
+class="chat-close"
+id="chatClose"
+aria-label="Close Chat">
+
 <i class="fa-solid fa-xmark"></i>
+
 </button>
 
+
 </div>
 
 
-<div class="chat-messages" id="chatMessages">
+<div class="chat-messages"
+id="chatMessages">
+
 
 <div class="message bot">
 
-Hello! 👋 Welcome to Solatech Computers.
+Hello! 👋
+
+Welcome to Solatech Computers.
+
+<br><br>
 
 How can we help you today?
 
@@ -2581,6 +3299,7 @@ You can ask about:
 
 </div>
 
+
 </div>
 
 
@@ -2591,13 +3310,16 @@ type="text"
 id="chatInput"
 placeholder="Type your question...">
 
-<button id="chatSend">
+<button
+id="chatSend"
+aria-label="Send Message">
 
 <i class="fa-solid fa-paper-plane"></i>
 
 </button>
 
 </div>
+
 
 </div>
 
@@ -2608,13 +3330,17 @@ placeholder="Type your question...">
 
 <script>
 
-/* MOBILE MENU */
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 const menuBtn =
 document.getElementById("menuBtn");
 
 const navLinks =
 document.getElementById("navLinks");
+
 
 menuBtn.addEventListener("click",()=>{
 
@@ -2623,7 +3349,8 @@ navLinks.classList.toggle("active");
 });
 
 
-document.querySelectorAll(".nav-links a")
+document
+.querySelectorAll(".nav-links a")
 .forEach(link=>{
 
 link.addEventListener("click",()=>{
@@ -2635,7 +3362,9 @@ navLinks.classList.remove("active");
 });
 
 
-/* CHATBOT */
+/* =====================================================
+   CHATBOT
+===================================================== */
 
 const chatButton =
 document.getElementById("chatButton");
@@ -2697,15 +3426,17 @@ message.toLowerCase();
 let reply =
 "Thanks for contacting Solatech Computers. Please call 0775 799 634 or WhatsApp us for detailed assistance.";
 
+
 if(
 text.includes("computer") ||
 text.includes("laptop")
 ){
 
 reply =
-"We sell computers, laptops, monitors, accessories and other technology products. You can also contact us for computer repairs and upgrades.";
+"We sell computers, laptops, monitors, accessories and other technology products. We also provide computer repairs, upgrades and maintenance.";
 
 }
+
 
 else if(
 text.includes("repair") ||
@@ -2717,6 +3448,7 @@ reply =
 
 }
 
+
 else if(
 text.includes("network")
 ){
@@ -2725,6 +3457,7 @@ reply =
 "We provide networking solutions including Wi-Fi, routers, switches, structured cabling and network troubleshooting.";
 
 }
+
 
 else if(
 text.includes("cctv") ||
@@ -2736,6 +3469,7 @@ reply =
 
 }
 
+
 else if(
 text.includes("shirt") ||
 text.includes("dtf") ||
@@ -2743,9 +3477,10 @@ text.includes("branding")
 ){
 
 reply =
-"Our branding division provides DTF T-shirt printing, branded diaries, mugs, caps and promotional merchandise.";
+"Our branding division provides DTF T-shirt printing, branded diaries, mugs, caps, promotional clothing and corporate merchandise.";
 
 }
+
 
 else if(
 text.includes("banner") ||
@@ -2759,6 +3494,19 @@ reply =
 
 }
 
+
+else if(
+text.includes("mug") ||
+text.includes("diary") ||
+text.includes("cap")
+){
+
+reply =
+"We provide customised mugs, diaries, caps and other branded promotional products.";
+
+}
+
+
 else if(
 text.includes("location") ||
 text.includes("where")
@@ -2768,6 +3516,7 @@ reply =
 "We are located at Shop 7, Manica Chambers, Main Street, Mutare, Zimbabwe.";
 
 }
+
 
 else if(
 text.includes("contact") ||
@@ -2779,6 +3528,7 @@ reply =
 "You can contact Solatech on 0775 799 634, 0783 527 449, 0714 367 000 or 0714 367 002.";
 
 }
+
 
 setTimeout(()=>{
 
@@ -2824,11 +3574,14 @@ sendChat();
 });
 
 
-/* WHATSAPP CONTACT FORM */
+/* =====================================================
+   WHATSAPP CONTACT FORM
+===================================================== */
 
 function sendWhatsApp(event){
 
 event.preventDefault();
+
 
 const name =
 document.getElementById("name").value;
@@ -2844,10 +3597,13 @@ document.getElementById("message").value;
 
 
 const text =
+
 `Hello Solatech Computers.
 
 Name: ${name}
+
 Phone: ${phone}
+
 Service: ${service}
 
 Message:
@@ -2855,8 +3611,10 @@ ${message}`;
 
 
 const url =
+
 "https://wa.me/263775799634?text="
-+encodeURIComponent(text);
++
+encodeURIComponent(text);
 
 
 window.open(url,"_blank");
@@ -2864,7 +3622,9 @@ window.open(url,"_blank");
 }
 
 
-/* SIMPLE SCROLL REVEAL */
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
 
 const observer =
 new IntersectionObserver(
@@ -2888,8 +3648,14 @@ threshold:.12
 });
 
 
-document.querySelectorAll(
-".service-card,.product-card,.process-card,.stat,.about-image,.branding-gallery img"
+document
+.querySelectorAll(
+".service-card," +
+".product-card," +
+".process-card," +
+".stat," +
+".about-image," +
+".branding-gallery img"
 )
 .forEach(el=>{
 
@@ -2906,6 +3672,7 @@ observer.observe(el);
 
 
 </script>
+
 
 </body>
 </html>
